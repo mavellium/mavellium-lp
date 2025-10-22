@@ -32,7 +32,7 @@ export function Clients() {
                   </Avatar>
                   <div>
                     <p className="font-semibold">Doni</p>
-                    <p className="text-sm text-muted-foreground">CEO, Tegbe</p>
+                    <p className="text-sm text-muted-foreground">Fundador, Tegbe</p>
                   </div>
                 </div>
               </CardHeader>
@@ -49,13 +49,13 @@ export function Clients() {
                   <Avatar>
                     <AvatarImage
                       alt="Cliente"
-                      src="https://randomuser.me/api/portraits/women/44.jpg"
+                      src="https://randomuser.me/api/portraits/men/44.jpg"
                     />
                     <AvatarFallback>MC</AvatarFallback>
                   </Avatar>
                   <div>
-                    <p className="font-semibold">Maria Clara</p>
-                    <p className="text-sm text-muted-foreground">Diretora, FAIP</p>
+                    <p className="font-semibold">Marcos</p>
+                    <p className="text-sm text-muted-foreground">Diretor, FAIP</p>
                   </div>
                 </div>
               </CardHeader>
@@ -89,27 +89,6 @@ export function Clients() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-          <div className="flex flex-wrap justify-center gap-8 mt-16 items-center">
-            <div className="text-[#04A15E] font-semibold">Parcerias:</div>
-            <div className="flex items-center gap-2 px-6 py-3 rounded-lg bg-background">
-              <div className="size-8 rounded bg-[#3B82F6]/10 flex items-center justify-center">
-                <span className="text-[#3B82F6] font-bold text-sm">T</span>
-              </div>
-              <span className="font-semibold">Tegbe</span>
-            </div>
-            <div className="flex items-center gap-2 px-6 py-3 rounded-lg bg-background">
-              <div className="size-8 rounded bg-[#3B82F6]/10 flex items-center justify-center">
-                <span className="text-[#3B82F6] font-bold text-sm">F</span>
-              </div>
-              <span className="font-semibold">FAIP</span>
-            </div>
-            <div className="flex items-center gap-2 px-6 py-3 rounded-lg bg-background">
-              <div className="size-8 rounded bg-[#3B82F6]/10 flex items-center justify-center">
-                <span className="text-[#3B82F6] font-bold text-sm">T</span>
-              </div>
-              <span className="font-semibold">TegPro</span>
-            </div>
           </div>
         </div>
       </section>

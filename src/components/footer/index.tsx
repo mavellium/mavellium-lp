@@ -91,7 +91,7 @@ export function Footer() {
               <Button size="sm" variant="outline" className="mt-4">
                 <a href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F" className="flex gap-2 justify-center items-center">
 
-                  <Icon icon="solar:chat-round-bold" className="size-4" />
+                  <img src="/ic_baseline-whatsapp.svg" className="w-6 invert" />
                   WhatsApp
                 </a>
               </Button>
