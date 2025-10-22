@@ -14,111 +14,103 @@ import { Separator } from "@/components/ui/separator";
 
 export function Footer() {
   return (
-      <footer className="border-t w-full flex flex-col justify-center items-center border-border py-12 md:py-16 bg-[#030F1B]">
-        <div className="container">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <div className="space-y-4">
-              <div className="flex items-center gap-2">
-                <img src="/logo-mavellium-footer.svg" alt="Mavellium" width={203} height={52} />
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Desenvolvimento de software e landing pages de alta conversão.
-              </p>
-              <div className="flex items-center gap-3">
-                <Button size="icon" variant="ghost">
-                  <Icon icon="solar:instagram-bold" className="size-5" />
-                </Button>
-                <Button size="icon" variant="ghost">
-                  <Icon icon="solar:linkedin-bold" className="size-5" />
-                </Button>
-                <Button size="icon" variant="ghost">
-                  <Icon icon="solar:facebook-bold" className="size-5" />
-                </Button>
-              </div>
+    <footer className="border-t w-full flex flex-col justify-center items-center border-border py-12 md:py-16 bg-[#030F1B]">
+      <div className="container">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="space-y-4">
+            <div className="flex items-center gap-2">
+              <img src="/logo-mavellium-footer.svg" alt="Mavellium" width={203} height={52} />
             </div>
-            <div className="space-y-4">
-              <h3 className="font-semibold text-white">Empresa</h3>
-              <nav className="flex flex-col space-y-2">
-                <a
-                  href="/sobre"
-                  className="text-sm text-muted-foreground hover:text-white transition-colors"
-                >
-                  Sobre
-                </a>
-                <a
-                  href="/servicos"
-                  className="text-sm text-muted-foreground hover:text-white transition-colors"
-                >
-                  Serviços
-                </a>
-                <a
-                  href="/cases"
-                  className="text-sm text-muted-foreground hover:text-white transition-colors"
-                >
-                  Cases
-                </a>
-                <a
-                  href="/contato"
-                  className="text-sm text-muted-foreground hover:text-white transition-colors"
-                >
-                  Contato
-                </a>
-              </nav>
-            </div>
-            <div className="space-y-4">
-              <h3 className="font-semibold text-white">Serviços</h3>
-              <nav className="flex flex-col space-y-2">
-                <a
-                  href="/servicos#landing-pages"
-                  className="text-sm text-muted-foreground hover:text-white transition-colors"
-                >
-                  Landing Pages
-                </a>
-                <a
-                  href="/servicos#desenvolvimento-web"
-                  className="text-sm text-muted-foreground hover:text-white transition-colors"
-                >
-                  Desenvolvimento Web
-                </a>
-                <a
-                  href="/servicos#apps-personalizados"
-                  className="text-sm text-muted-foreground hover:text-white transition-colors"
-                >
-                  Apps Personalizados
-                </a>
-                <a
-                  href="/servicos#integracoes"
-                  className="text-sm text-muted-foreground hover:text-white transition-colors"
-                >
-                  Integrações
-                </a>
-              </nav>
-            </div>
-            <div className="space-y-4">
-              <h3 className="font-semibold text-white">Contato</h3>
-              <div className="space-y-2">
-                <p className="text-sm text-muted-foreground hover:text-white">contato@mavellium.com</p>
-                <p className="text-sm text-muted-foreground hover:text-white">+55 11 99999-9999</p>
-                <Button size="sm" variant="outline" className="mt-4">
-                  <Icon icon="solar:whatsapp-bold" className="size-4" />
-                  WhatsApp
-                </Button>
-              </div>
-            </div>
+            <p className="text-sm text-muted-foreground">
+              Desenvolvimento de software e landing pages de alta conversão.
+            </p>
           </div>
-          <Separator className="my-8" />
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <p>© 2024 Mavellium — Todos os direitos reservados.</p>
-            <div className="flex items-center gap-4">
-              <a href="/privacidade" className="hover:text-foreground transition-colors">
-                Privacidade
+          <div className="space-y-4">
+            <h3 className="font-semibold text-white">Empresa</h3>
+            <nav className="flex flex-col space-y-2">
+              <a
+                href="/sobre"
+                className="text-sm text-muted-foreground hover:text-white transition-colors"
+              >
+                Sobre
               </a>
-              <a href="/termos" className="hover:text-foreground transition-colors">
-                Termos
+              <a
+                href="/servicos"
+                className="text-sm text-muted-foreground hover:text-white transition-colors"
+              >
+                Serviços
               </a>
+              <a
+                href="/cases"
+                className="text-sm text-muted-foreground hover:text-white transition-colors"
+              >
+                Cases
+              </a>
+              <a
+                href="/contato"
+                className="text-sm text-muted-foreground hover:text-white transition-colors"
+              >
+                Contato
+              </a>
+            </nav>
+          </div>
+          <div className="space-y-4">
+            <h3 className="font-semibold text-white">Serviços</h3>
+            <nav className="flex flex-col space-y-2">
+              <a
+                href="/servicos#landing-pages"
+                className="text-sm text-muted-foreground hover:text-white transition-colors"
+              >
+                Landing Pages
+              </a>
+              <a
+                href="/servicos#desenvolvimento-web"
+                className="text-sm text-muted-foreground hover:text-white transition-colors"
+              >
+                Desenvolvimento Web
+              </a>
+              <a
+                href="/servicos#apps-personalizados"
+                className="text-sm text-muted-foreground hover:text-white transition-colors"
+              >
+                Apps Personalizados
+              </a>
+              <a
+                href="/servicos#integracoes"
+                className="text-sm text-muted-foreground hover:text-white transition-colors"
+              >
+                Integrações
+              </a>
+            </nav>
+          </div>
+          <div className="space-y-4">
+            <h3 className="font-semibold text-white">Contato</h3>
+            <div className="space-y-2">
+              <p className="text-sm text-muted-foreground hover:text-white">contato@mavellium.com</p>
+              <p className="text-sm text-muted-foreground hover:text-white">+55 11 99999-9999</p>
+              <Button size="sm" variant="outline" className="mt-4">
+                <a href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F" className="flex gap-2 justify-center items-center">
+
+                  <Icon icon="solar:chat-round-bold" className="size-4" />
+                  WhatsApp
+                </a>
+              </Button>
             </div>
           </div>
         </div>
-      </footer>
+        <Separator className="my-8" />
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+          <p>© 2024 Mavellium — Todos os direitos reservados.</p>
+          <div className="flex items-center gap-4">
+            <a href="/privacidade" className="hover:text-foreground transition-colors">
+              Privacidade
+            </a>
+            <a href="/termos" className="hover:text-foreground transition-colors">
+              Termos
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 }
