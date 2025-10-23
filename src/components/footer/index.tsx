@@ -14,7 +14,7 @@ import { Separator } from "@/components/ui/separator";
 
 export function Footer() {
   return (
-    <footer className="border-t w-full flex flex-col justify-center border-border py-12 px-12 md:py-16 bg-[#030F1B]">
+    <footer className="border-t w-full flex flex-col justify-center items-center border-border py-12 px-12 md:py-16 bg-[#030F1B]">
       <div className="container">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 justify-center text-center">
           <div className="space-y-4">
