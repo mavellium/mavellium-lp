@@ -12,7 +12,7 @@ import {
 
 export function NextStep() {
   return (
-    <section className="py-20 w-full flex flex-col justify-center items-center bg-[#041526] md:py-32">
+    <section className="py-20 w-full flex flex-col justify-center items-center bg-[#041526] md:py-32" id="contato">
       <div className="container">
         <div className="mx-auto max-w-3xl">
           <Card className="border-2 border-[#04A15E] bg-[#030E19]">

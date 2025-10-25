@@ -13,7 +13,7 @@ import {
 
 export function Cases() {
     return (
-        <section className="py-16 w-full flex flex-col justify-center items-center px-12 md:py-24 bg-[#0C2136]">
+        <section className="py-16 w-full flex flex-col justify-center items-center px-12 md:py-24 bg-[#0C2136]" id="cases">
         <div className="container">
           <div className="text-center text-white space-y-4 mb-12">
             <Badge variant="outline" className="text-white w-[100px]">Portfólio</Badge>

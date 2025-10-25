@@ -12,7 +12,7 @@ import {
 
 export function Solution() {
     return (
-        <section className="py-16 w-full flex flex-col justify-center items-center bg-[#030F1B] md:py-24">
+        <section className="py-16 w-full flex flex-col justify-center items-center bg-[#030F1B] md:py-24" id="servicos">
         <div className="container">
           <div className="text-center text-white space-y-4 mb-12">
             <Badge variant="outline" className="text-white w-[100px]">Serviços</Badge>
