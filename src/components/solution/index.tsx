@@ -23,21 +23,40 @@ export function Solution() {
               Oferecemos serviços completos de desenvolvimento digital
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <Card className="group hover:shadow-lg transition-shadow">
+          <div className="grid md:grid-cols-2 gap-6 place-items-center lg:flex lg:justify-center w-full">
+            <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px]">
               <CardHeader>
-                <div className="size-12 rounded-lg bg-[#04A15E]/30 flex items-center justify-center mb-4">
-                  <Icon icon="solar:display-bold" className="size-6 text-[#04A15E]" />
+                <div className="size-12 rounded-lg bg-gradient-to-br from-[#285AD9] to-[#285AD9]/90 flex items-center justify-center mb-4">
+                  <Icon icon="solar:rocket-bold" className="size-6 text-white" />
                 </div>
                 <CardTitle>Landing Pages de Alta Conversão</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Páginas que encantam e convertem leads com design e performance otimizada.
+                  Páginas que encantam e
+                  <span className="block">convertem leads com</span>
+                  <span className="block">design e performance</span>
+                  otimizada.
                 </p>
               </CardContent>
             </Card>
-            <Card className="group hover:shadow-lg transition-shadow">
+            <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px]">
+              <CardHeader>
+                <div className="size-12 rounded-lg bg-gradient-to-r from-[#1E40AF] to-[#1E40AF]/90 flex items-center justify-center mb-4">
+                  <Icon icon="solar:code-bold" className="size-6 text-white" />
+                </div>
+                <CardTitle>Sites Institucionais que fortalecem sua marca</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Páginas que encantam e
+                  <span className="block">convertem leads com</span>
+                  <span className="block">design e performance</span>
+                  otimizada.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px]">
               <CardHeader>
                 <div className="size-12 rounded-lg bg-[#04A15E]/30 flex items-center justify-center mb-4">
                   <Icon icon="solar:code-bold" className="size-6 text-[#04A15E]" />
@@ -46,11 +65,13 @@ export function Solution() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Sites institucionais e sistemas escaláveis com as melhores tecnologias.
+                  Sites institucionais e
+                  <span className="block">sistemas escaláveis com as </span>
+                  melhores tecnologias.
                 </p>
               </CardContent>
             </Card>
-            <Card className="group hover:shadow-lg transition-shadow">
+            <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px]">
               <CardHeader>
                 <div className="size-12 rounded-lg bg-[#04A15E]/30 flex items-center justify-center mb-4">
                   <Icon icon="solar:widget-bold" className="size-6 text-[#04A15E]" />
@@ -59,20 +80,9 @@ export function Solution() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Gerenciadores, portais e ferramentas sob medida que otimizam processos.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="group hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="size-12 rounded-lg bg-[#04A15E]/30 flex items-center justify-center mb-4">
-                  <Icon icon="solar:settings-bold" className="size-6 text-[#04A15E]" />
-                </div>
-                <CardTitle>Integrações e Suporte</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Integramos e garantimos funcionamento contínuo da sua operação.
+                  Gerenciadores, portais e
+                  <span className="block">ferramentas sob medida </span>
+                  que otimizam processos.
                 </p>
               </CardContent>
             </Card>

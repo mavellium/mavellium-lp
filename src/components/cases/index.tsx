@@ -28,7 +28,7 @@ export function Cases() {
             <Card className="pt-0 overflow-hidden group hover:shadow-lg transition-shadow">
               <img
                 alt="Tegbe"
-                src="https://wqnmyfkavrotpmupbtou.supabase.co/storage/v1/object/public/generation-assets/photos/business-networking/landscape/3.webp"
+                src="/tegbe.png"
                 className="w-full h-48 object-cover rounded-t-xl"
               />
               <CardHeader>
@@ -51,7 +51,7 @@ export function Cases() {
             <Card className="pt-0 overflow-hidden group hover:shadow-lg transition-shadow">
               <img
                 alt="TegPro"
-                src="https://wqnmyfkavrotpmupbtou.supabase.co/storage/v1/object/public/generation-assets/photos/business-networking/landscape/5.webp"
+                src="/tegpro.png"
                 className="w-full h-48 object-cover rounded-t-xl"
               />
               <CardHeader>
@@ -74,7 +74,7 @@ export function Cases() {
             <Card className="pt-0 overflow-hidden group hover:shadow-lg transition-shadow">
               <img
                 alt="FAIP"
-                src="https://wqnmyfkavrotpmupbtou.supabase.co/storage/v1/object/public/generation-assets/photos/universities/landscape/2.webp"
+                src="/faef.png"
                 className="w-full h-48 object-cover rounded-t-xl"
               />
               <CardHeader>
@@ -97,7 +97,7 @@ export function Cases() {
             <Card className="pt-0 overflow-hidden group hover:shadow-lg transition-shadow">
               <img
                 alt="Instituto do Sorriso"
-                src="https://wqnmyfkavrotpmupbtou.supabase.co/storage/v1/object/public/generation-assets/photos/dental-practices/landscape/4.webp"
+                src="/instituto-sorriso.png"
                 className="w-full h-48 object-cover rounded-t-xl"
               />
               <CardHeader>
