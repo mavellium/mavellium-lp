@@ -1,13 +1,13 @@
-import { About } from "@/components/about";
-import { Cases } from "@/components/cases";
-import { Clients } from "@/components/clients";
-import { Header } from "@/components/header";
-import { Headline } from "@/components/headline";
-import { Methodology } from "@/components/methodology";
-import { NextStep } from "@/components/nextStep";
-import { Solution } from "@/components/solution";
-import { Footer } from "@/components/footer";
-import ButtonWhatsapp from "@/components/ButtonWhatsapp";
+import { About } from "@/components/Home/about";
+import { Cases } from "@/components/Home/cases";
+import { Clients } from "@/components/Home/clients";
+import { Header } from "@/components/Home/header";
+import { Headline } from "@/components/Home/headline";
+import { Methodology } from "@/components/Home/methodology";
+import { NextStep } from "@/components/Home/nextStep";
+import { Solution } from "@/components/Home/solution";
+import { Footer } from "@/components/Home/footer";
+import ButtonWhatsapp from "@/components/Home/ButtonWhatsapp";
 
 
 export default function Home() {
