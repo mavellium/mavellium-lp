@@ -157,11 +157,11 @@ export default function Servicos() {
                     </div>
                 </div>
             </section>
-            <section className="py-16 w-full flex flex-col justify-center items-center bg-[#030F1B] md:py-24" id="servicos">
+            <section className="py-16 w-full flex flex-col justify-center items-center bg-[#0C2136] md:py-24" id="servicos">
                 <div className="container w-full flex flex-col justify-center items-center">
                     {/* Título */}
                     <div className="text-center text-white space-y-4 mb-12">
-                        <h2 className="font-heading text-3xl md:text-4xl font-semibold text-[#04A15E]">
+                        <h2 className="font-heading text-3xl md:text-5xl font-bold text-[#04A15E]">
                             Nossos Serviços
                         </h2>
                         <p className="text-lg max-w-2xl mx-auto">
