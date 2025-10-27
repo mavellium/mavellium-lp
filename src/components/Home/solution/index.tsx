@@ -25,20 +25,22 @@ export function Solution() {
         </div>
         <div className="grid md:grid-cols-2 gap-6 place-items-center lg:flex lg:justify-center w-full">
           <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px]">
-            <CardHeader>
-              <div className="size-12 rounded-lg bg-gradient-to-br from-[#285AD9] to-[#285AD9]/90 flex items-center justify-center mb-4">
-                <Icon icon="solar:rocket-bold" className="size-6 text-white" />
-              </div>
-              <CardTitle>Landing Pages de Alta Conversão</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Páginas que encantam e
-                <span className="block">convertem leads com</span>
-                <span className="block">design e performance</span>
-                otimizada.
-              </p>
-            </CardContent>
+            <a href="/Servicos_details">
+              <CardHeader>
+                <div className="size-12 rounded-lg bg-gradient-to-br from-[#285AD9] to-[#285AD9]/90 flex items-center justify-center mb-4">
+                  <Icon icon="solar:rocket-bold" className="size-6 text-white" />
+                </div>
+                <CardTitle>Landing Pages de Alta Conversão</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Páginas que encantam e
+                  <span className="block">convertem leads com</span>
+                  <span className="block">design e performance</span>
+                  otimizada.
+                </p>
+              </CardContent>
+            </a>
           </Card>
           <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px]">
             <CardHeader>

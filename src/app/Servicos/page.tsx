@@ -187,8 +187,10 @@ export default function Servicos() {
                                     vendas.
                                 </p>
                                 <Button variant="ghost" className="w-full flex justify-start mt-5">
+                                    <a href="/Servicos_details" className="flex justify-center items-center gap-2">
                                     Saiba mais
                                     <Icon icon="solar:arrow-right-bold" className="size-4" />
+                                    </a>
                                 </Button>
                             </CardContent>
                         </Card>
