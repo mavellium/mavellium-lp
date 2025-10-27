@@ -83,12 +83,20 @@ export default function Servicos() {
                                 className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto px-6 py-4 text-base sm:text-lg"
                             >
                                 <a
-                                    href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F"
+                                    href="#form"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        const section = document.querySelector("#form");
+                                        if (section) {
+                                            section.scrollIntoView({ behavior: "smooth", block: "start" });
+                                        }
+                                    }}
                                     className="flex gap-2 justify-center items-center"
                                 >
                                     Quero participar do sorteio
                                 </a>
                             </Button>
+
                         </div>
 
                         <div className="flex justify-center md:justify-start items-center gap-2 mt-8">
@@ -178,7 +186,7 @@ export default function Servicos() {
                                         alert("❌ Erro ao enviar os dados. Tente novamente.");
                                     }
                                 }}
-                                className="flex flex-col sm:flex-row flex-wrap gap-4 bg-[#193551]/30 p-5 rounded-xl justify-center items-center"
+                                className="flex flex-col sm:flex-row flex-wrap gap-4 bg-[#193551]/30 p-5 rounded-xl justify-center items-center" id="form"
                             >
                                 <input
                                     type="text"
