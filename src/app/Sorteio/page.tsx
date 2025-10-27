@@ -156,23 +156,46 @@ export default function Servicos() {
                             </p>
                         </div>
                         <div className="w-full max-w-xl mx-auto mt-10">
-                            <form className="flex flex-col sm:flex-row flex-wrap gap-4 bg-[#193551]/30 p-5 rounded-xl justify-center items-center">
-                                {/* Input Nome */}
+                            <form
+                                onSubmit={async (e) => {
+                                    e.preventDefault();
+
+                                    const form = e.currentTarget;
+                                    const nome = (form.querySelector('input[name="nome"]') as HTMLInputElement).value;
+                                    const whatsapp = (form.querySelector('input[name="whatsapp"]') as HTMLInputElement).value;
+                                    const interesse = (form.querySelector('select[name="interesse"]') as HTMLSelectElement).value;
+
+                                    const res = await fetch("/api/sorteio", {
+                                        method: "POST",
+                                        headers: { "Content-Type": "application/json" },
+                                        body: JSON.stringify({ nome, whatsapp, interesse }),
+                                    });
+
+                                    if (res.ok) {
+                                        alert("🎉 Cadastro realizado com sucesso! Boa sorte!");
+                                        form.reset();
+                                    } else {
+                                        alert("❌ Erro ao enviar os dados. Tente novamente.");
+                                    }
+                                }}
+                                className="flex flex-col sm:flex-row flex-wrap gap-4 bg-[#193551]/30 p-5 rounded-xl justify-center items-center"
+                            >
                                 <input
                                     type="text"
+                                    name="nome"
                                     placeholder="Qual seu nome completo?"
                                     className="w-full sm:w-[48%] px-4 py-3 rounded-lg bg-white/10 text-white placeholder-white/70 border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#04A15E] transition-all"
                                 />
 
-                                {/* Input WhatsApp */}
                                 <input
-                                    type="email"
-                                    placeholder="Digite seu Número de WhatsApp"
+                                    type="text"
+                                    name="whatsapp"
+                                    placeholder="Digite seu número de WhatsApp"
                                     className="w-full sm:w-[48%] px-4 py-3 rounded-lg bg-white/10 text-white placeholder-white/70 border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#04A15E] transition-all"
                                 />
 
-                                {/* Select de Opções */}
                                 <select
+                                    name="interesse"
                                     className="w-full px-4 py-3 rounded-lg bg-white/10 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#04A15E] transition-all custom-select"
                                     defaultValue=""
                                 >
@@ -184,28 +207,16 @@ export default function Servicos() {
                                     <option value="loja">Loja Virtual</option>
                                 </select>
 
-                                {/* Botão */}
                                 <div className="flex flex-col sm:flex-row gap-4 w-full">
-                                    <Button
-                                        size="lg"
-                                        className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full"
+                                    <button
+                                        type="submit"
+                                        className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full px-6 py-4 text-base sm:text-lg rounded-lg text-white font-semibold hover:opacity-90 transition-all"
                                     >
-                                        <a
-                                            href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F"
-                                            className="flex gap-2 justify-center items-center"
-                                        >
-                                            QUERO PARTICIPAR DO SORTEIO
-                                        </a>
-                                    </Button>
-                                </div>
-
-                                {/* Aviso */}
-                                <div className="w-full flex justify-center items-center text-[#ffffff]/50 text-[12px] mt-2 text-center">
-                                    <p>
-                                        Ao enviar este formulário, você concorda com os termos do sorteio e autoriza a Mavellium a entrar em contato por WhatsApp.
-                                    </p>
+                                        QUERO PARTICIPAR DO SORTEIO
+                                    </button>
                                 </div>
                             </form>
+
 
                             {/* CSS embutido para estilizar as opções */}
                             <style jsx>{`
