@@ -111,7 +111,7 @@ export default function Servicos() {
                     {/* Lado esquerdo - Texto */}
                     <div className="flex-1 xl:max-w-3xl lg:max-w-full text-center xl:text-left space-y-1 flex flex-col items-center xl:items-start">
                         <div className="flex items-center justify-center gap-2 mb-6 bg-[#3B82F6]/10 text-[#04A15E] p-2 px-5 rounded-full">
-                            <Icon icon="solar:star-bold" className="w-4 h-4" />
+                            <Icon icon="solar:buildings-2-bold" className="w-4 h-4" />
                             Sites Institucionais
                         </div>
                         <h1 className="font-heading text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-nowrap">
@@ -169,15 +169,15 @@ export default function Servicos() {
                         <div className="relative w-[536px] h-[536px] flex justify-center items-center">
                             {/* Imagem 2 - mais alta */}
                             <img
-                                src="https://placehold.co/480x560"
+                                src="https://placehold.co/480x760"
                                 alt="Ilustração alta"
-                                className="absolute bottom-0 left-50 right-0 mx-auto w-[384px] h-[536px] object-cover rounded-2xl shadow-lg shadow-black/25 transform z-10"
+                                className="absolute bottom-15 left-110 right-0 mx-auto w-[130px] h-[200px] object-cover rounded-2xl border-white border-15 shadow-lg shadow-black/25 transform z-20"
                             />
                             {/* Imagem 1 - mais achatada e larga */}
                             <img
                                 src="https://placehold.co/536x400"
                                 alt="Ilustração larga"
-                                className="absolute top-40 left-0 right-15 mx-auto w-[512px] h-[342px] object-cover rounded-2xl shadow-lg shadow-black/25 transform z-20"
+                                className="absolute top-20 left-0 right-15 mx-auto w-[528px] h-[368px] object-cover rounded-2xl border-white border-20 shadow-lg shadow-black/25 transform z-10"
                             />
                         </div>
                     </div>
