@@ -43,20 +43,22 @@ export function Solution() {
             </a>
           </Card>
           <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px]">
-            <CardHeader>
-              <div className="size-12 rounded-lg bg-gradient-to-r from-[#1E40AF] to-[#1E40AF]/90 flex items-center justify-center mb-4">
-                <Icon icon="solar:code-bold" className="size-6 text-white" />
-              </div>
-              <CardTitle>Sites Institucionais que fortalecem sua marca</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Páginas que encantam e
-                <span className="block">convertem leads com</span>
-                <span className="block">design e performance</span>
-                otimizada.
-              </p>
-            </CardContent>
+            <a href="/Servicos_institucionais">
+              <CardHeader>
+                <div className="size-12 rounded-lg bg-gradient-to-r from-[#1E40AF] to-[#1E40AF]/90 flex items-center justify-center mb-4">
+                  <Icon icon="solar:code-bold" className="size-6 text-white" />
+                </div>
+                <CardTitle>Sites Institucionais que fortalecem sua marca</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Páginas que encantam e
+                  <span className="block">convertem leads com</span>
+                  <span className="block">design e performance</span>
+                  otimizada.
+                </p>
+              </CardContent>
+            </a>
           </Card>
           <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px]">
             <CardHeader>
