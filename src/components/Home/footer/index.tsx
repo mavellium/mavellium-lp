@@ -52,7 +52,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="./mdi_instagram.svg" alt="Instagram" />
+                <img src="/mdi_instagram.svg" alt="Instagram" />
               </a>
             </Button>
           </div>
@@ -80,10 +80,10 @@ export function Footer() {
           <div className="space-y-4 flex flex-col items-center md:items-start">
             <h3 className="font-semibold text-white">Serviços</h3>
             <nav className="flex flex-col space-y-2">
-              <a href="/Servicos_details" className="text-sm text-[#6B7280] hover:text-white transition-colors">
+              <a href="/Servicos/LandingPage" className="text-sm text-[#6B7280] hover:text-white transition-colors">
                 Landing Pages de Alta Conversão
               </a>
-              <a href="/Servicos_institucionais" className="text-sm text-[#6B7280] hover:text-white transition-colors">
+              <a href="/Servicos/Institucionais" className="text-sm text-[#6B7280] hover:text-white transition-colors">
                 Sites Institucionais
               </a>
               {/* <a href="/servicos#apps-personalizados" className="text-sm text-[#6B7280] hover:text-white transition-colors">

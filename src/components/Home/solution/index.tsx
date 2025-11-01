@@ -24,7 +24,7 @@ export function Solution() {
         </div>
         <div className="grid md:grid-cols-2 gap-6 place-items-center lg:flex lg:justify-center w-full">
           <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px]">
-            <a href="/Servicos_details">
+            <a href="/Servicos/LandingPage">
               <CardHeader>
                 <div className="size-12 rounded-lg bg-gradient-to-br from-[#285AD9] to-[#285AD9]/90 flex items-center justify-center mb-4">
                   <Icon icon="solar:rocket-bold" className="size-6 text-white" />
@@ -42,7 +42,7 @@ export function Solution() {
             </a>
           </Card>
           <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px]">
-            <a href="/Servicos_institucionais">
+            <a href="/Servicos/Institucionais">
               <CardHeader>
                 <div className="size-12 rounded-lg bg-gradient-to-r from-[#1E40AF] to-[#1E40AF]/90 flex items-center justify-center mb-4">
                   <Icon icon="solar:code-bold" className="size-6 text-white" />
