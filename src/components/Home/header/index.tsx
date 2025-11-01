@@ -39,7 +39,7 @@ export function Header() {
               Cases
             </a> */}
             <a
-              href="#sobre"
+              href="/Sobre"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Sobre
@@ -51,7 +51,7 @@ export function Header() {
               Blog
             </a> */}
             <a
-              href="#contato"
+              href="/Contato"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Contato

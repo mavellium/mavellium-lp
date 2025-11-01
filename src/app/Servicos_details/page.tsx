@@ -123,7 +123,7 @@ export default function Servicos() {
 
                     {/* GRID AJUSTADO */}
                     <div
-                        className="flex flex-col lg:flex-row justify-center items-center gap-8 w-full max-w-7xl mx-auto"
+                        className="flex flex-col lg:flex-row justify-center items-center gap-8 w-full max-w-7xl mx-auto p-5"
                     >
                         {/* CARD 1 */}
                         <Card className="group hover:shadow-lg transition-shadow w-full sm:max-w-sm h-[338px] flex flex-col space-around items-center text-center">
@@ -141,7 +141,7 @@ export default function Servicos() {
                         </Card>
 
                         {/* CARD 2 */}
-                        <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[338px] flex flex-col space-around items-start text-center">
+                        <Card className="group hover:shadow-lg transition-shadow w-full sm:max-w-sm  h-[338px] flex flex-col space-around items-start text-center">
                             <CardHeader className="flex flex-col justify-center items-center w-full">
                                 <div className="size-15  rounded-lg bg-gradient-to-r from-[#10B981] to-[#10B981]/90 shadow-[0_0_5px_#10B981] flex items-center justify-center mb-4">
                                     <Icon icon="solar:widget-4-bold" className="size-8 text-white" />
@@ -156,7 +156,7 @@ export default function Servicos() {
                         </Card>
 
                         {/* CARD 3 */}
-                        <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[338px] flex flex-col space-around items-center text-center">
+                        <Card className="group hover:shadow-lg transition-shadow w-full sm:max-w-sm  h-[338px] flex flex-col space-around items-center text-center">
                             <CardHeader className="flex flex-col justify-center items-center w-full">
                                 <div className="size-15  rounded-lg bg-gradient-to-r from-[#6366F1] to-[#6366F1]/90 shadow-[0_0_5px_#6366F1] flex items-center justify-center mb-4">
                                     <Icon icon="solar:pie-chart-2-bold" className="size-8 text-white" />
@@ -171,7 +171,7 @@ export default function Servicos() {
                         </Card>
 
                         {/* CARD 4 */}
-                        <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[338px] flex flex-col space-around items-center text-center">
+                        <Card className="group hover:shadow-lg transition-shadow w-full sm:max-w-sm h-[338px] flex flex-col space-around items-center text-center">
                             <CardHeader className="flex flex-col justify-center items-center w-full">
                                 <div className="size-15  rounded-lg bg-gradient-to-r from-[#F97316] to-[#F97316]/90 shadow-[0_0_5px_#F97316] flex items-center justify-center mb-4">
                                     <Icon icon="solar:settings-bold" className="size-8 text-white" />

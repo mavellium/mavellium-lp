@@ -61,7 +61,7 @@ export function Footer() {
           <div className="space-y-4 flex flex-col items-center md:items-start">
             <h3 className="font-semibold text-white">Empresa</h3>
             <nav className="flex flex-col space-y-2">
-              <a href="#sobre" className="text-sm text-[#6B7280] hover:text-white transition-colors">
+              <a href="/Sobre" className="text-sm text-[#6B7280] hover:text-white transition-colors">
                 Sobre
               </a>
               <a href="/Servicos" className="text-sm text-[#6B7280] hover:text-white transition-colors">
@@ -70,7 +70,7 @@ export function Footer() {
               {/* <a href="#cases" className="text-sm text-[#6B7280] hover:text-white transition-colors">
                 Cases
               </a> */}
-              <a href="#contato" className="text-sm text-[#6B7280] hover:text-white transition-colors">
+              <a href="/Contato" className="text-sm text-[#6B7280] hover:text-white transition-colors">
                 Contato
               </a>
             </nav>
