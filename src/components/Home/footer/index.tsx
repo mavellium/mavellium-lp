@@ -64,12 +64,12 @@ export function Footer() {
               <a href="#sobre" className="text-sm text-[#6B7280] hover:text-white transition-colors">
                 Sobre
               </a>
-              <a href="#servicos" className="text-sm text-[#6B7280] hover:text-white transition-colors">
+              <a href="/Servicos" className="text-sm text-[#6B7280] hover:text-white transition-colors">
                 Serviços
               </a>
-              <a href="#cases" className="text-sm text-[#6B7280] hover:text-white transition-colors">
+              {/* <a href="#cases" className="text-sm text-[#6B7280] hover:text-white transition-colors">
                 Cases
-              </a>
+              </a> */}
               <a href="#contato" className="text-sm text-[#6B7280] hover:text-white transition-colors">
                 Contato
               </a>
@@ -80,24 +80,24 @@ export function Footer() {
           <div className="space-y-4 flex flex-col items-center md:items-start">
             <h3 className="font-semibold text-white">Serviços</h3>
             <nav className="flex flex-col space-y-2">
-              <a href="/servicos#landing-pages" className="text-sm text-[#6B7280] hover:text-white transition-colors">
-                Landing Pages
+              <a href="/Servicos_details" className="text-sm text-[#6B7280] hover:text-white transition-colors">
+                Landing Pages de Alta Conversão
               </a>
-              <a href="/servicos#desenvolvimento-web" className="text-sm text-[#6B7280] hover:text-white transition-colors">
-                Desenvolvimento Web
+              <a href="/Servicos_institucionais" className="text-sm text-[#6B7280] hover:text-white transition-colors">
+                Sites Institucionais
               </a>
-              <a href="/servicos#apps-personalizados" className="text-sm text-[#6B7280] hover:text-white transition-colors">
+              {/* <a href="/servicos#apps-personalizados" className="text-sm text-[#6B7280] hover:text-white transition-colors">
                 Apps Personalizados
-              </a>
+              </a> */}
             </nav>
           </div>
 
           {/* Contato */}
           <div className="space-y-4 flex flex-col items-center md:items-start">
             <h3 className="font-semibold text-white">Contato</h3>
-            <div className="space-y-2">
-              <p className="text-sm text-[#6B7280] hover:text-white">contato@mavellium.com</p>
-              <p className="text-sm text-[#6B7280] hover:text-white">(14) 99177-9502</p>
+            <div className="space-y-2 flex flex-col">
+              <a href="mailto:contato@mavellium.com" target="blank_" className="text-sm text-[#6B7280] hover:text-white">contato@mavellium.com</a>
+              <a href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F" target="blank_" className="text-sm text-[#6B7280] hover:text-white">(14) 99177-9502</a>
             </div>
           </div>
         </div>

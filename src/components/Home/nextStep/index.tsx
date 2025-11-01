@@ -17,9 +17,6 @@ export function NextStep() {
         <div className="mx-auto max-w-3xl">
           <Card className="border-2 border-[#04A15E] bg-[#030E19]">
             <CardHeader className="text-center space-y-4">
-              <Badge variant="outline" className="w-fit mx-auto text-white">
-                Vamos conversar?
-              </Badge>
               <CardTitle className="text-3xl md:text-4xl text-[#04A15E]">
                 Pronto para dar o próximo passo?
               </CardTitle>

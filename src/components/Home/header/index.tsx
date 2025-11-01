@@ -4,13 +4,6 @@ import { Button } from "@/components/ui/button"
 import { Icon } from "@iconify/react"
 
 export function Header() {
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
-    e.preventDefault()
-    const section = document.querySelector(id)
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" })
-    }
-  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border flex justify-center bg-white px-10">
@@ -29,42 +22,36 @@ export function Header() {
           <nav className="hidden md:flex gap-6">
             <a
               href="/"
-              onClick={(e) => handleScroll(e, "#")}
               className="text-sm font-medium text-black hover:text-foreground transition-colors"
             >
               Home
             </a>
             <a
-              href="#servicos"
-              onClick={(e) => handleScroll(e, "#servicos")}
+              href="/Servicos"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Serviços
             </a>
-            <a
+            {/* <a
               href="#cases"
-              onClick={(e) => handleScroll(e, "#cases")}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Cases
-            </a>
+            </a> */}
             <a
               href="#sobre"
-              onClick={(e) => handleScroll(e, "#sobre")}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Sobre
             </a>
-            <a
+            {/* <a
               href="#blog"
-              onClick={(e) => handleScroll(e, "#blog")}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Blog
-            </a>
+            </a> */}
             <a
               href="#contato"
-              onClick={(e) => handleScroll(e, "#contato")}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Contato

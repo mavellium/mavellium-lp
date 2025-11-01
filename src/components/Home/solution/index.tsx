@@ -15,7 +15,6 @@ export function Solution() {
     <section className="py-16 w-full flex flex-col justify-center items-center bg-[#030F1B] md:py-24" id="servicos">
       <div className="container">
         <div className="text-center text-white space-y-4 mb-12">
-          <Badge variant="outline" className="text-white w-[100px]">Serviços</Badge>
           <h2 className="font-heading text-3xl md:text-4xl font-semibold text-[#04A15E]">
             Nossas soluções
           </h2>
@@ -60,7 +59,7 @@ export function Solution() {
               </CardContent>
             </a>
           </Card>
-          <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px]">
+          {/* <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px]">
             <CardHeader>
               <div className="size-12 rounded-lg bg-[#04A15E]/30 flex items-center justify-center mb-4">
                 <Icon icon="solar:code-bold" className="size-6 text-[#04A15E]" />
@@ -89,7 +88,7 @@ export function Solution() {
                 que otimizam processos.
               </p>
             </CardContent>
-          </Card>
+          </Card> */}
         </div>
         <div className="text-center mt-12">
           <Button size="lg" variant="outline" className="bg-white/30 text-white">

@@ -14,7 +14,6 @@ export function Clients() {
          <section className="py-16 w-full flex flex-col justify-center items-center md:py-24 bg-[#030F1B]">
         <div className="container">
           <div className="text-center space-y-4 mb-12">
-            <Badge variant="outline" className="text-white w-[100px]">Depoimentos</Badge>
             <h2 className="font-heading text-3xl md:text-4xl font-semibold text-[#04A15E]">
               O que nossos clientes dizem
             </h2>

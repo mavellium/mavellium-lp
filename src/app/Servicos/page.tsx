@@ -1,6 +1,7 @@
 "use client";
 
-import { Footer } from "@/components/Home/footer";
+import { Footer } from "@/components/Home/Footer";
+import { Header } from "@/components/Home/Header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@iconify/react";
@@ -16,86 +17,9 @@ export default function Servicos() {
     }
     return (
         <>
-            <header className="sticky top-0 z-50 w-full border-b border-border flex justify-center bg-white px-10">
-                <div className="container flex h-16 items-center justify-between">
-                    <div className="flex items-center gap-8">
-                        <a href="/" className="flex items-center">
-                            <img
-                                src="/logo-mavellium.svg"
-                                alt="Mavellium"
-                                width={180}
-                                height={40}
-                                className="object-contain"
-                            />
-                        </a>
+           <Header></Header>
 
-                        <nav className="hidden md:flex gap-6">
-                            <a
-                                href="/Home"
-                                onClick={(e) => handleScroll(e, "#")}
-                                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                                Home
-                            </a>
-                            <a
-                                href="#servicos"
-                                onClick={(e) => handleScroll(e, "#servicos")}
-                                className="text-sm font-medium text-black hover:text-foreground transition-colors"
-                            >
-                                Serviços
-                            </a>
-                            <a
-                                href="#cases"
-                                onClick={(e) => handleScroll(e, "#cases")}
-                                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                                Cases
-                            </a>
-                            <a
-                                href="#sobre"
-                                onClick={(e) => handleScroll(e, "#sobre")}
-                                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                                Sobre
-                            </a>
-                            <a
-                                href="#blog"
-                                onClick={(e) => handleScroll(e, "#blog")}
-                                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                                Blog
-                            </a>
-                            <a
-                                href="#contato"
-                                onClick={(e) => handleScroll(e, "#contato")}
-                                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                                Contato
-                            </a>
-                        </nav>
-                    </div>
-
-                    <div className="hidden md:flex">
-                        <Button className="shadow-lg shadow-primary/20 bg-[#008E52] hover:bg-[#017346]">
-                            <a
-                                href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex gap-2 justify-center items-center"
-                            >
-                                <img src="/ic_baseline-whatsapp.svg" className="w-6" />
-                                Fale com a gente
-                            </a>
-                        </Button>
-                    </div>
-
-                    <Button size="icon" variant="ghost" className="md:hidden">
-                        <Icon icon="solar:hamburger-menu-bold" className="size-6" />
-                    </Button>
-                </div>
-            </header>
-
-            <section className="relative w-full flex justify-end items-center overflow-hidden bg-[#091725] py-16 px-6 md:px-10">
+            <section className="relative w-full flex h-screen justify-end items-center overflow-hidden bg-[#091725] py-16 px-6 md:px-10">
                 <div className="container mx-auto flex items-center justify-between md:gap-20 text-white gap-5">
 
                     {/* Lado esquerdo - Texto */}
@@ -216,8 +140,8 @@ export default function Servicos() {
                             </CardContent>
                         </Card>
 
-                        {/* CARD 3 */}
-                        <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[312px]">
+                        
+                        {/* <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[312px]">
                             <CardHeader>
                                 <div className="size-12 rounded-lg bg-gradient-to-r from-[#6D28D9] to-[#6D28D9]/90 shadow-[0_0_5px_#6D28D9] transition-shadow flex items-center justify-center mb-4">
                                     <Icon icon="solar:smartphone-line-duotone" className="size-6 text-white" />
@@ -236,7 +160,7 @@ export default function Servicos() {
                             </CardContent>
                         </Card>
 
-                        {/* CARD 4 */}
+                        
                         <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[312px]">
                             <CardHeader>
                                 <div className="size-12 rounded-lg bg-gradient-to-r from-[#1E40AF] to-[#1E40AF]/90 shadow-[0_0_5px_#1E40AF] transition-shadow flex items-center justify-center mb-4">
@@ -256,7 +180,7 @@ export default function Servicos() {
                             </CardContent>
                         </Card>
 
-                        {/* CARD 5 */}
+                        
                         <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[312px]">
                             <CardHeader>
                                 <div className="size-12 rounded-lg bg-gradient-to-r from-[#6D28D9] to-[#6D28D9]/90 shadow-[0_0_5px_#6D28D9] transition-shadow flex items-center justify-center mb-4">
@@ -275,7 +199,7 @@ export default function Servicos() {
                                     <Icon icon="solar:arrow-right-bold" className="size-4" />
                                 </Button>
                             </CardContent>
-                        </Card>
+                        </Card> */}
                     </div>
                 </div>
             </section>
