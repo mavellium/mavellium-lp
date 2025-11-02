@@ -58,10 +58,7 @@ export default function Servicos() {
                 </div>
             </section>
 
-            <section
-                className="py-16 w-full flex flex-col justify-center items-center bg-[#0C2136] md:py-24"
-                id="servicos"
-            >
+            <section className="py-16 w-full flex flex-col justify-center items-center bg-[#0C2136] md:py-24">
                 <div className="container w-full flex flex-col justify-center items-center">
                     <div className="flex flex-col lg:flex-row gap-8 w-full max-w-7xl justify-center items-center lg:items-start">
                         <Card className="group hover:shadow-lg transition-shadow bg-[#010910] border-[#04A15E] w-full h-auto">
@@ -134,86 +131,121 @@ export default function Servicos() {
                 </div>
             </section>
 
-            <section
-                className="py-16 w-full flex flex-col justify-center items-center bg-[#0C2136] md:py-24"
-                id="servicos"
-            >
+            <section className="py-16 w-full flex flex-col justify-center items-center bg-[#0C2136] md:py-24">
                 <div className="container w-full flex flex-col justify-center items-center">
-                    <h2 className="text-4xl text-[#04A15E] font-semibold mb-10">O que precisava ser resolvido</h2>
+                    <h2 className="text-4xl text-[#04A15E] flex text-center font-semibold mb-10">O que precisava ser resolvido</h2>
                     <div className="flex flex-col lg:flex-row gap-8 w-full max-w-7xl justify-center items-center lg:items-start">
                         <Card className="group hover:shadow-lg transition-shadow bg-[#010910] border-[#04A15E] w-full h-auto">
                             <CardContent>
-                                <div className="flex items-start gap-20">
+                                <div className="flex flex-col lg:flex-row justify-start items-start gap-10">
 
-                                    {/* Coluna Esquerda - Texto */}
-                                    <div className="flex-1 flex flex-col text-center lg:text-left">
-                                        <div className="flex items-center text-center w-full">
-                                            <div className="size-12 flex items-center justify-center">
-                                                <Icon icon="solar:buildings-bold" className="size-6 text-[#007BFF]" />
+                                     {/* Parte 1 */}
+                                    <div className="flex-1 flex flex-col text-start">
+                                        <div className="flex items-center mb-5 gap-3">
+                                            <div className="flex items-center justify-center">
+                                                <Icon icon="solar:shield-warning-bold" className="size-6 text-[#DC3545]" />
                                             </div>
-                                            <CardTitle className="text-2xl sm:text-3xl md:text-[20px] text-white flex items-center h-full justify-center mb-5 font-semibold">
+                                            <CardTitle className="text-2xl sm:text-3xl md:text-[25px] text-white font-semibold">
                                                 Problemas Identificados
                                             </CardTitle>
                                         </div>
-                                        <div className="text-white text-sm sm:text-base gap-5 leading-relaxed">
-                                            <div className="gap-5">
-                                                <div className="flex gap-2">
-                                                    <Icon icon="solar:buildings-bold" className="size-6 text-[#007BFF]" />
-                                                    <span className="block">Site institucional desatualizado com design ultrapassado</span>
+                                       
+                                        <div className="flex flex-col justify-center items-start gap-5">
+                                            
+                                            <div className="flex gap-3 items-center justify-center sm:justify-start">
+                                                <div className="flex items-center justify-center">
+                                                    <Icon icon="solar:close-circle-bold" className="size-6 text-[#DC3545]" />
                                                 </div>
-                                                <div className="flex gap-2">
-                                                    <Icon icon="solar:buildings-bold" className="size-6 text-[#007BFF]" />
-                                                    <span className="block">Baixa taxa de conversão e engajamento</span>
+                                                <div className="flex flex-col items-start text-[#E5E5E5]">
+                                                    <p className="text-sm sm:text-base">Site institucional desatualizado com design ultrapassado</p>
                                                 </div>
-                                                <div className="flex gap-2">
-                                                    <Icon icon="solar:buildings-bold" className="size-6 text-[#007BFF]" />
-                                                    <span className="block">Performance lenta prejudicando SEO</span>
+                                            </div>
+
+                                            <div className="flex gap-3 items-center justify-center sm:justify-start">
+                                                <div className="flex items-center justify-center">
+                                                    <Icon icon="solar:close-circle-bold" className="size-6 text-[#DC3545]" />
                                                 </div>
-                                                <div className="flex gap-2">
-                                                    <Icon icon="solar:buildings-bold" className="size-6 text-[#007BFF]" />
-                                                    <span className="block">Falta de identidade visual forte</span>
+                                                <div className="flex flex-col items-start text-[#E5E5E5]">
+                                                    <p className="text-sm sm:text-base">Baixa taxa de conversão e engajamento</p>
+                                                </div>
+                                            </div>
+
+                                           
+                                            <div className="flex gap-3 items-center justify-center sm:justify-start">
+                                                <div className="flex items-center justify-center">
+                                                    <Icon icon="solar:close-circle-bold" className="size-6 text-[#DC3545]" />
+                                                </div>
+                                                <div className="flex flex-col items-start text-[#E5E5E5]">
+                                                    <p className="text-sm sm:text-base">Performance lenta prejudicando SEO</p>
+                                                </div>
+                                            </div>
+
+                                            <div className="flex gap-3 items-center justify-center sm:justify-start">
+                                                <div className=" flex items-center justify-center">
+                                                    <Icon icon="solar:close-circle-bold" className="size-6 text-[#DC3545]" />
+                                                </div>
+                                                <div className="flex flex-col items-start text-[#E5E5E5]">
+                                                    <p className="text-sm sm:text-base">Falta de identidade visual forte</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    {/* Ícones Informativos */}
-                                    <div className="flex flex-col justify-center items-center sm:justify-between gap-10 mt-8">
-                                        {/* Cliente */}
-                                        <div className="flex gap-3 items-center justify-center sm:justify-start">
-                                            <div className="size-12 rounded-lg bg-[#007BFF]/10 flex items-center justify-center">
-                                                <Icon icon="solar:buildings-bold" className="size-6 text-[#007BFF]" />
+                                    {/* parte 2 */}
+                                    <div className="flex-1 flex flex-col text-start">
+                                        <div className="flex items-center mb-5 gap-3">
+                                            <div className="flex items-center justify-center">
+                                                <Icon icon="solar:flag-bold" className="size-6 text-[#20C997]" />
                                             </div>
-                                            <div className="flex flex-col items-start text-white">
-                                                <h2 className="text-[16px] sm:text-[18px] text-[#04A15E] font-semibold">Cliente</h2>
-                                                <p className="text-sm sm:text-base">Tegbe</p>
-                                            </div>
+                                            <CardTitle className="text-2xl sm:text-3xl md:text-[25px] text-white font-semibold">
+                                                Objetivos do Projeto
+                                            </CardTitle>
                                         </div>
 
-                                        {/* Segmento */}
-                                        <div className="flex gap-3 items-center justify-center sm:justify-start">
-                                            <div className="size-12 rounded-lg bg-[#20C997]/10 flex items-center justify-center">
-                                                <Icon icon="solar:graph-new-up-bold" className="size-6 text-[#20C997]" />
-                                            </div>
-                                            <div className="flex flex-col items-start text-white">
-                                                <h2 className="text-[16px] sm:text-[18px] text-[#04A15E] font-semibold">Segmento</h2>
-                                                <p className="text-sm sm:text-base">Marketing Digital</p>
-                                            </div>
-                                        </div>
 
-                                        {/* Tipo de Projeto */}
-                                        <div className="flex gap-3 items-center justify-center sm:justify-start">
-                                            <div className="size-12 rounded-lg bg-[#6C757D]/10 flex items-center justify-center">
-                                                <Icon icon="solar:star-bold" className="size-6 text-white" />
+                                        {/* Ícones Informativos */}
+                                        <div className="flex flex-col justify-center items-start gap-5">
+                                            {/* Cliente */}
+                                            <div className="flex gap-3 items-center justify-center sm:justify-start">
+                                                <div className="flex items-center justify-center">
+                                                    <Icon icon="solar:check-circle-bold" className="size-6 text-[#20C997]" />
+                                                </div>
+                                                <div className="flex flex-col items-start text-[#E5E5E5]">
+                                                    <p className="text-sm sm:text-base">Criar landing page moderna e profissional</p>
+                                                </div>
                                             </div>
-                                            <div className="flex flex-col items-start text-white">
-                                                <h2 className="text-[16px] sm:text-[18px] text-[#04A15E] font-semibold">Tipo de Projeto</h2>
-                                                <p className="text-sm sm:text-base">Landing Page</p>
+
+                                            {/* Segmento */}
+                                            <div className="flex gap-3 items-center justify-center sm:justify-start">
+                                                <div className="flex items-center justify-center">
+                                                    <Icon icon="solar:check-circle-bold" className="size-6 text-[#20C997]" />
+                                                </div>
+                                                <div className="flex flex-col items-start text-[#E5E5E5]">
+                                                    <p className="text-sm sm:text-base">Aumentar taxa de conversão em 40%</p>
+                                                </div>
+                                            </div>
+
+                                            {/* Tipo de Projeto */}
+                                            <div className="flex gap-3 items-center justify-center sm:justify-start">
+                                                <div className="flex items-center justify-center">
+                                                    <Icon icon="solar:check-circle-bold" className="size-6 text-[#20C997]" />
+                                                </div>
+                                                <div className="flex flex-col items-start text-[#E5E5E5]">
+                                                    <p className="text-sm sm:text-base">Atingir performance superior (tempo de carregamento menor que 2s)</p>
+                                                </div>
+                                            </div>
+
+                                            <div className="flex gap-3 items-center justify-center sm:justify-start">
+                                                <div className=" flex items-center justify-center">
+                                                    <Icon icon="solar:check-circle-bold" className="size-6 text-[#20C997]" />
+                                                </div>
+                                                <div className="flex flex-col items-start text-[#E5E5E5]">
+                                                    <p className="text-sm sm:text-base">Melhorar posicionamento SEO</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </CardContent>
                         </Card>
                     </div>
