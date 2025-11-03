@@ -83,28 +83,28 @@ export default function Servicos() {
                     </div>
 
                     {/* Lado direito - Imagem (oculta no mobile) */}
-                    <div className="relative hidden lg:hidden xl:block lg:flex flex-1 justify-center items-center">
+                    {/* <div className="relative hidden lg:hidden xl:block lg:flex flex-1 justify-center items-center"> */}
                         {/* Glow de fundo */}
-                        <div className="absolute inset-0 flex justify-center items-center">
+                        {/* <div className="absolute inset-0 flex justify-center items-center">
                             <div className="w-[536px] h-[536px] bg-gradient-to-r from-[#6D28D9]/50 to-[#1E40AF]/50 blur-[64px] rounded-md opacity-60"></div>
-                        </div>
+                        </div> */}
 
                         {/* Container das imagens sobrepostas */}
-                        <div className="relative w-[536px] h-[536px] flex justify-center items-center">
+                        {/* <div className="relative w-[536px] h-[536px] flex justify-center items-center"> */}
                             {/* Imagem 2 - mais alta */}
-                            <img
+                            {/* <img
                                 src="https://placehold.co/480x760"
                                 alt="Ilustração alta"
                                 className="absolute bottom-15 left-110 right-0 mx-auto w-[130px] h-[200px] object-cover rounded-2xl border-white border-15 shadow-lg shadow-black/25 transform z-20"
-                            />
+                            /> */}
                             {/* Imagem 1 - mais achatada e larga */}
-                            <img
+                            {/* <img
                                 src="https://placehold.co/536x400"
                                 alt="Ilustração larga"
                                 className="absolute top-20 left-0 right-15 mx-auto w-[528px] h-[368px] object-cover rounded-2xl border-white border-20 shadow-lg shadow-black/25 transform z-10"
-                            />
-                        </div>
-                    </div>
+                            /> */}
+                        {/* </div> */}
+                    {/* </div> */}
 
                 </div>
             </section>

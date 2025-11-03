@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mavellium",
-  description: "Desenvolvimento de software",
+  title: "Mavellium — Landing Pages e Sites que Geram Resultados",
+  description: "Criamos landing pages e sites institucionais de alta performance. Aumente conversões e destaque sua marca com tecnologia e design Mavellium.",
 };
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

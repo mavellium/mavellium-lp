@@ -200,7 +200,7 @@ export default function Servicos() {
                             {/* Cards de contato */}
                             <div className="flex flex-col lg:flex-row gap-6 mt-10 w-full justify-center items-center">
                                 {/* Card - E-mail */}
-                                <div className="flex flex-col items-center justify-center w-full sm:w-[300px] md:w-[340px] lg:w-[352px] h-auto sm:h-[280px] bg-[#010A12] rounded-md border-2 border-[#04A15E] gap-4 p-6 text-center">
+                                {/* <div className="flex flex-col items-center justify-center w-full sm:w-[300px] md:w-[340px] lg:w-[352px] h-auto sm:h-[280px] bg-[#010A12] rounded-md border-2 border-[#04A15E] gap-4 p-6 text-center">
                                     <div className="w-14 h-14 rounded-lg bg-[#04A15E]/10 flex items-center justify-center">
                                         <Icon icon="solar:letter-bold" className="w-8 h-8 text-[#04A15E]" />
                                     </div>
@@ -213,7 +213,7 @@ export default function Servicos() {
                                     >
                                         contato@mavellium.com
                                     </a>
-                                </div>
+                                </div> */}
 
                                 {/* Card - WhatsApp */}
                                 <div className="flex flex-col items-center justify-center w-full sm:w-[300px] md:w-[340px] lg:w-[352px] h-auto sm:h-[280px] bg-[#010A12] rounded-md border-2 border-[#04A15E] gap-4 p-6 text-center">

@@ -56,19 +56,19 @@ export default function Servicos() {
                                 </a>
                             </Button>
 
-                            <Button
+                            {/* <Button
                                 size="lg"
                                 variant="outline"
                                 className="bg-[#fff]/20 border-white/30 text-white w-full sm:w-auto"
                             >
                                 <Icon icon="solar:gallery-bold" className="size-5" />
                                 Ver portfólio
-                            </Button>
+                            </Button> */}
                         </div>
                     </div>
 
                     {/* Lado direito - Imagem (oculta no mobile) */}
-                    <div className="relative hidden sm:hidden md:hidden lg:block md:flex flex-1 justify-center">
+                    {/* <div className="relative hidden sm:hidden md:hidden lg:block md:flex flex-1 justify-center">
                         <div className="absolute inset-0 flex justify-start items-center">
                             <div className="w-[536px] h-[536px] bg-gradient-to-r from-[#6D28D9]/50 to-[#1E40AF]/50 blur-[64px] rounded-md opacity-64"></div>
                         </div>
@@ -78,7 +78,7 @@ export default function Servicos() {
                             alt="Ilustração de serviços digitais"
                             className="relative z-10 max-w-[350px] md:max-w-[450px] lg:max-w-[536px] w-full h-auto rounded-2xl shadow-lg shadow-black/25"
                         />
-                    </div>
+                    </div> */}
                 </div>
             </section>
             <section className="py-16 w-full flex flex-col justify-center items-center bg-[#0C2136] md:py-24" id="servicos">
@@ -110,12 +110,9 @@ export default function Servicos() {
                                     <span className="block">UX e SEO. Otimizadas para campanhas e</span>
                                     vendas.
                                 </p>
-                                <Button variant="ghost" className="w-full flex justify-start mt-5">
-                                    <a href="/Servicos/LandingPage" className="flex justify-center items-center gap-2">
+                                <a href="/Servicos/LandingPage" className="flex justify-center items-center gap-2 w-full flex justify-start mt-5">
                                     Saiba mais
-                                    <Icon icon="solar:arrow-right-bold" className="size-4" />
                                     </a>
-                                </Button>
                             </CardContent>
                         </Card>
 
@@ -125,18 +122,19 @@ export default function Servicos() {
                                 <div className="size-12 rounded-lg bg-gradient-to-r from-[#1E40AF] to-[#1E40AF]/90 shadow-[0_0_5px_#1E40AF] transition-shadow flex items-center justify-center mb-4">
                                     <Icon icon="solar:cpu-bold" className="size-6 text-white" />
                                 </div>
-                                <CardTitle className="text-[20px]">Sistemas Web Sob Medida</CardTitle>
+                                <CardTitle className="text-[20px]">Sites Institucionais que fortalecem sua marca</CardTitle>
                             </CardHeader>
                             <CardContent>
                                 <p className="text-muted-foreground">
-                                    Automatizamos processos e criamos
-                                    <span className="block">soluções personalizadas para sua empresa </span>
-                                    crescer.
+                                    Páginas que encantam e
+                                    convertem leads com
+                                    design e performance
+                                    otimizada.
                                 </p>
-                                <Button variant="ghost" className="w-full flex justify-start mt-5">
+
+                                    <a href="/Servicos/Institucional" className="flex justify-center items-center gap-2 w-full flex justify-start mt-5">
                                     Saiba mais
-                                    <Icon icon="solar:arrow-right-bold" className="size-4" />
-                                </Button>
+                                    </a>
                             </CardContent>
                         </Card>
 

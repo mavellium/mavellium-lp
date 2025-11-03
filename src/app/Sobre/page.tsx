@@ -90,20 +90,25 @@ export default function Servicos() {
                         {/* Texto */}
                         <div className="bg-[#051321] text-white rounded-lg shadow-lg p-6 sm:p-10 text-sm sm:text-base leading-relaxed">
                             <p className="mb-7">
-                                A Mavellium nasceu da visão de um grupo de desenvolvedores e designers apaixonados por
+                                A Mavellium nasceu da visão de três desenvolvedores apaixonados por tecnologia, design e resultados.
                                 <span className="block">
-                                    tecnologia e resultados. Desde o início, nossa missão foi clara: criar soluções digitais que não apenas
-                                    impressionam visualmente, mas que entregam performance real e conversão efetiva.
+                                    Criada há apenas cinco meses, nossa empresa já vem se destacando por entregar soluções digitais que combinam estética moderna, performance e conversão real.
                                 </span>
                             </p>
                             <p className="mb-7">
-                                Ao longo dos anos, evoluímos de uma pequena equipe para uma empresa consolidada no mercado nacional,
-                                especializada em desenvolvimento de software sob medida, landing pages de alta conversão e experiências
-                                digitais completas.
+                                Desde o início, nossa missão é clara: ajudar marcas a crescerem através de experiências digitais inteligentes, unindo tecnologia e estratégia.
                             </p>
-                            <p>
-                                Hoje, orgulhamo-nos de ter ajudado dezenas de empresas a alcançarem seus objetivos digitais, sempre
-                                mantendo nossos valores de inovação, transparência e excelência como pilares fundamentais.
+                            <p className="mb-7">
+                                Mesmo jovem, a Mavellium já tem um portfólio com grandes empresas do mercado nacional, que confiam em nosso trabalho para criar landing pages de alta conversão, sites institucionais profissionais e sistemas sob medida.
+                            </p>
+                             <p className="mb-7">
+                                Nosso diferencial está na forma como pensamos cada projeto — com inovação, transparência e excelência técnica em cada etapa do processo.
+                            </p>
+                            <p className="mb-7">
+                                Na Mavellium, acreditamos que tecnologia só tem valor quando gera resultado.
+                                <span className="block">
+                                    E é exatamente isso que entregamos: soluções digitais que transformam negócios.
+                                </span>
                             </p>
                         </div>
 
@@ -112,7 +117,7 @@ export default function Servicos() {
                             {[
                                 { numero: "6+", texto: "Projetos entregues" },
                                 { numero: "3+", texto: "Clientes Satisfeitos" },
-                                { numero: "6+", texto: "Meses de Experiência" },
+                                { numero: "5+", texto: "Meses de Experiência" },
                                 { numero: "100%", texto: "Taxa de Satisfação" },
                             ].map((item, i) => (
                                 <div
@@ -145,14 +150,15 @@ export default function Servicos() {
                                 icon: "solar:box-bold",
                                 titulo: "Missão",
                                 texto: [
-                                    "Entregar soluções digitais que gerem resultado real e experiência de qualidade aos clientes, superando expectativas em cada projeto.",
+                                    "Entregar soluções digitais de alta performance que unem tecnologia, design e estratégia para gerar resultados reais e sustentáveis.",
+                                    "Criamos landing pages, sites institucionais e sistemas personalizados que impulsionam marcas e ampliam o impacto digital de nossos clientes."
                                 ],
                             },
                             {
                                 icon: "solar:telescope-bold",
                                 titulo: "Visão",
                                 texto: [
-                                    "Ser referência em desenvolvimento de software e landing pages de alta conversão no mercado nacional, reconhecidos pela excelência técnica.",
+                                    "Ser referência nacional em desenvolvimento de soluções digitais, criando landing pages, sites institucionais e sistemas personalizados que unam tecnologia, design e performance para gerar resultados reais e sustentáveis aos nossos clientes.",
                                 ],
                             },
                             {
@@ -274,7 +280,7 @@ export default function Servicos() {
                     </div>
                 </div>
             </section>
-            <section className="py-16 w-full flex flex-col justify-center items-center md:py-24 bg-[#041526]">
+            {/* <section className="py-16 w-full flex flex-col justify-center items-center md:py-24 bg-[#041526]">
                 <div className="container">
                     <div className="text-center space-y-4 mb-12">
                         <h2 className="font-heading text-3xl md:text-5xl font-bold text-[#04A15E]">
@@ -296,7 +302,7 @@ export default function Servicos() {
                                 icon: "https://randomuser.me/api/portraits/men/33.jpg",
                                 titulo: "Vinícius Tavares Mota",
                                 sub: "Fundador",
-                                texto: ["Especialista em estratégia digital e desenvolvimento de negócios, com 10+ anos de experiência."],
+                                texto: ["Desenvolvedor Full Stack com 4 anos de experiência em .NET e Angular. Fundador e sócio comercial da Mavellium, atua na prospecção de clientes e gestão estratégica, conectando tecnologia e resultados reais."]
                             },
                             {
                                 icon: "Luan.png",
@@ -310,7 +316,7 @@ export default function Servicos() {
                                 className="flex flex-col items-center justify-start bg-[#010A12] rounded-xl gap-4 px-6 py-10 w-full sm:w-[300px] transition-transform duration-300 hover:scale-105"
                             >
                                 {/* Foto redonda */}
-                                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-[#04A15E]/40 shadow-md flex items-center justify-center bg-[#041526]">
+                                {/* <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-[#04A15E]/40 shadow-md flex items-center justify-center bg-[#041526]">
                                     <img src={card.icon} alt={card.titulo} className="w-full h-full object-cover" />
                                 </div>
 
@@ -332,7 +338,7 @@ export default function Servicos() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
             <section className="py-16 w-full flex flex-col justify-center items-center md:py-24 bg-[#030F1B]">
                 <div className="container">
                     <div className="text-center space-y-4 mb-12">
