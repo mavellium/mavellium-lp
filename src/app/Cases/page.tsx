@@ -35,19 +35,23 @@ export default function Servicos() {
                             <span className="block">resultados reais no digital.</span>
                         </p>
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-6 w-full sm:w-auto">
-                            <Button
-                                size="lg"
-                                className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto text-sm sm:text-base"
+                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-6 w-full sm:w-auto transition-all hover:scale-110">
+                            <a
+                                href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full sm:w-auto cursor-pointer"
                             >
-                                <a
-                                    href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F"
-                                    className="flex gap-2 justify-center items-center"
+                                <Button
+                                    size="lg"
+                                    className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto flex gap-2 justify-center items-center cursor-pointer"
                                 >
+
                                     <Icon icon="solar:rocket-bold" className="w-5 h-5 sm:w-6 sm:h-6" />
                                     Quero ser como esses Cases
-                                </a>
-                            </Button>
+
+                                </Button>
+                            </a>
                         </div>
                     </div>
 
@@ -99,7 +103,7 @@ export default function Servicos() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             <section className="py-16 w-full flex flex-col justify-center items-center px-12 md:py-24 bg-[#0C2136]" id="cases">
                 <div className="container">
@@ -320,20 +324,23 @@ export default function Servicos() {
                             </p>
 
                             {/* Botão WhatsApp */}
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
-                                <Button
-                                    size="lg"
-                                    className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] hover:scale-105 transition-transform duration-200 cursor-pointer"
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-10 w-full sm:w-auto transition-all hover:scale-110">
+                                <a
+                                    href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa."
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full sm:w-auto cursor-pointer"
                                 >
-                                    <a
-                                        href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F"
-                                        className="flex gap-2 justify-center items-center"
+                                    <Button
+                                        size="lg"
+                                        className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto flex gap-2 justify-center items-center cursor-pointer"
                                     >
-                                        <img src="/ic_baseline-whatsapp.svg" className="w-6 h-6" alt="WhatsApp" />
+                                        <img src="/ic_baseline-whatsapp.svg" alt="WhatsApp" className="w-6" />
                                         Fale com a gente
-                                    </a>
-                                </Button>
+                                    </Button>
+                                </a>
                             </div>
+
 
                             {/* Informações adicionais */}
                             <div className="flex justify-center items-center flex-wrap gap-5 sm:gap-10 md:gap-16 mt-5">

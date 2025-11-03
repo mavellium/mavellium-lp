@@ -60,17 +60,19 @@ export function Header() {
         </div>
 
         <div className="hidden md:flex">
-          <Button className="shadow-lg shadow-primary/20 bg-[#008E52] hover:bg-[#017346]">
-            <a
-              href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex gap-2 justify-center items-center"
-            >
+          <a
+            href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex gap-2 justify-center items-center cursor-pointer"
+          >
+            <Button className="shadow-lg shadow-primary/20 bg-[#008E52] hover:bg-[#017346] cursor-pointer transition-all hover:scale-105">
+
               <img src="/ic_baseline-whatsapp.svg" className="w-6" />
               Fale com a gente
-            </a>
-          </Button>
+
+            </Button>
+          </a>
         </div>
 
         <Button size="icon" variant="ghost" className="md:hidden">

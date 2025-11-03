@@ -42,19 +42,23 @@ export default function Servicos() {
                         />
                     </div>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-10 w-full sm:w-auto">
-                        <Button
-                            size="lg"
-                            className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto"
+                        <a
+                            href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full sm:w-auto cursor-pointer"
                         >
-                            <a
-                                href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa."
-                                className="flex gap-2 justify-center items-center"
+                            <Button
+                                size="lg"
+                                className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto flex gap-2 justify-center items-center cursor-pointer"
                             >
-                                <img src="/ic_baseline-whatsapp.svg" className="w-6" />
+                                <img src="/ic_baseline-whatsapp.svg" alt="WhatsApp" className="w-6" />
                                 Fale com a gente
-                            </a>
-                        </Button>
+                            </Button>
+                        </a>
                     </div>
+
+
                 </div>
             </section>
 
@@ -139,7 +143,7 @@ export default function Servicos() {
                             <CardContent>
                                 <div className="flex flex-col lg:flex-row justify-start items-start gap-10">
 
-                                     {/* Parte 1 */}
+                                    {/* Parte 1 */}
                                     <div className="flex-1 flex flex-col text-start">
                                         <div className="flex items-center mb-5 gap-3">
                                             <div className="flex items-center justify-center">
@@ -149,9 +153,9 @@ export default function Servicos() {
                                                 Problemas Identificados
                                             </CardTitle>
                                         </div>
-                                       
+
                                         <div className="flex flex-col justify-center items-start gap-5">
-                                            
+
                                             <div className="flex gap-3 items-center justify-center sm:justify-start">
                                                 <div className="flex items-center justify-center">
                                                     <Icon icon="solar:close-circle-bold" className="size-6 text-[#DC3545]" />
@@ -170,7 +174,7 @@ export default function Servicos() {
                                                 </div>
                                             </div>
 
-                                           
+
                                             <div className="flex gap-3 items-center justify-center sm:justify-start">
                                                 <div className="flex items-center justify-center">
                                                     <Icon icon="solar:close-circle-bold" className="size-6 text-[#DC3545]" />

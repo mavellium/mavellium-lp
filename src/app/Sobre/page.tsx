@@ -35,18 +35,19 @@ export default function Servicos() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
-                            <Button
-                                size="lg"
-                                className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto"
+                            <a
+                                href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa."
+                                className="flex gap-2 justify-center items-center"
                             >
-                                <a
-                                    href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa."
-                                    className="flex gap-2 justify-center items-center"
+                                <Button
+                                    size="lg"
+                                    className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto cursor-pointer transition-all hover:scale-110"
                                 >
                                     <img src="/ic_baseline-whatsapp.svg" className="w-6" />
                                     Fale com a gente
-                                </a>
-                            </Button>
+
+                                </Button>
+                            </a>
 
                             {/* <Button
                                 size="lg"
@@ -299,7 +300,7 @@ export default function Servicos() {
                                 texto: ["Especialista em estratégia digital e desenvolvimento de negócios, com 10+ anos de experiência."],
                             },
                             {
-                                icon: "Luan.png",
+                                icon: "/Luan.png",
                                 titulo: "Luan dos Santos",
                                 sub: "Fundador",
                                 texto: ["Especialista em estratégia digital e desenvolvimento de negócios, com 10+ anos de experiência."],
@@ -372,15 +373,17 @@ export default function Servicos() {
                                 <span className="block">alcançar resultados extraordinários no ambiente digital.</span>
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <Button
-                                    size="lg"
-                                    className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] cursor-pointer"
-                                >
-                                    <a href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F" className="flex gap-2 justify-center items-center">
+                                <a href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F"
+                                    className="flex gap-2 justify-center items-center">
+                                    <Button
+                                        size="lg"
+                                        className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] cursor-pointer transition-all hover:scale-110"
+                                    >
                                         <img src="/ic_baseline-whatsapp.svg" className="w-6" />
                                         Fale com a gente
-                                    </a>
-                                </Button>
+
+                                    </Button>
+                                </a>
                             </div>
                         </div>
                     </div>
