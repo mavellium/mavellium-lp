@@ -2,9 +2,7 @@
 
 import { Footer } from "@/components/Home/Footer";
 import { Header } from "@/components/Home/Header";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Icon } from "@iconify/react";
 
 export default function Servicos() {

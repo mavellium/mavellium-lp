@@ -28,7 +28,8 @@ function fixLinks(dir) {
           return match;
         }
 
-        return `href="/${p1}.html"`;
+        // Retorna no formato /NOME/index.html
+        return `href="/${p1}/index.html"`;
       });
 
       fs.writeFileSync(itemPath, html, "utf-8");
@@ -38,4 +39,4 @@ function fixLinks(dir) {
 }
 
 fixLinks(outDir);
-console.log("\n🎉 Links internos atualizados corretamente (sem afetar imagens ou assets)!");
+console.log("\n🎉 Links internos atualizados para o formato /pasta/index.html!");

@@ -1,6 +1,5 @@
 "use client";
 
-import { Cases } from "@/components/Home/Cases";
 import { Footer } from "@/components/Home/Footer";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@iconify/react";
