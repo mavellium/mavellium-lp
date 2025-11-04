@@ -50,21 +50,23 @@ export default function Servicos() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-8 w-full sm:w-auto">
-                            <Button
-                                size="lg"
-                                className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto"
+                            <a
+                                href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F"
+                                className="flex gap-2 justify-center items-center"
                             >
-                                <a
-                                    href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F"
-                                    className="flex gap-2 justify-center items-center"
+                                <Button
+                                    size="lg"
+                                    className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto cursor-pointer transition-all hover:scale-110"
                                 >
+
                                     <Icon
                                         icon="solar:rocket-bold"
                                         className="w-6 h-6"
                                     />
                                     Quero o meu Site Institucional
-                                </a>
-                            </Button>
+
+                                </Button>
+                            </a>
                         </div>
                         <div className="flex justify-center items-center gap-6 mt-5">
                             <div className="text-[14px] text-[#E5E5E5] flex flex-col items-center">
@@ -125,7 +127,7 @@ export default function Servicos() {
                         className="flex flex-col lg:flex-row justify-center items-center gap-8 w-full max-w-7xl mx-auto"
                     >
                         {/* CARD 1 */}
-                        <Card className="group hover:shadow-lg transition-shadow w-full sm:max-w-sm h-[338px] flex flex-col bg-[#010910] border-2 border-[#3B82F6] text-white space-around items-center text-center">
+                        <Card className="group hover:shadow-lg transition-shadow w-full sm:max-w-sm h-[338px] flex flex-col bg-[#010910] border-2 border-[#3B82F6] text-white space-around items-center text-center transition-all hover:scale-105">
                             <CardHeader className="flex flex-col justify-center items-center w-full">
                                 <div className="size-15 rounded-xl bg-gradient-to-br from-[#3B82F6] to-[#3B82F6]/90 shadow-[0_0_5px_#3B82F6] flex items-center justify-center mb-4">
                                     <Icon icon="solar:rocket-bold" className="size-8 text-white" />
@@ -140,7 +142,7 @@ export default function Servicos() {
                         </Card>
 
                         {/* CARD 2 */}
-                        <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[338px] flex flex-col bg-[#010910] border-2 border-[#10B981] text-white space-around items-start text-center">
+                        <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[338px] flex flex-col bg-[#010910] border-2 border-[#10B981] text-white space-around items-start text-center transition-all hover:scale-105">
                             <CardHeader className="flex flex-col justify-center items-center w-full">
                                 <div className="size-15  rounded-lg bg-gradient-to-r from-[#10B981] to-[#10B981]/90 shadow-[0_0_5px_#10B981] flex items-center justify-center mb-4">
                                     <Icon icon="solar:widget-4-bold" className="size-8 text-white" />
@@ -155,7 +157,7 @@ export default function Servicos() {
                         </Card>
 
                         {/* CARD 3 */}
-                        <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[338px] flex flex-col bg-[#010910] border-2 border-[#6366F1] text-white space-around items-center text-center">
+                        <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[338px] flex flex-col bg-[#010910] border-2 border-[#6366F1] text-white space-around items-center text-center transition-all hover:scale-105">
                             <CardHeader className="flex flex-col justify-center items-center w-full">
                                 <div className="size-15  rounded-lg bg-gradient-to-r from-[#6366F1] to-[#6366F1]/90 shadow-[0_0_5px_#6366F1] flex items-center justify-center mb-4">
                                     <Icon icon="solar:pie-chart-2-bold" className="size-8 text-white" />
@@ -170,7 +172,7 @@ export default function Servicos() {
                         </Card>
 
                         {/* CARD 4 */}
-                        <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[338px] flex flex-col bg-[#010910] border-2 border-[#F97316] text-white space-around items-center text-center">
+                        <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[338px] flex flex-col bg-[#010910] border-2 border-[#F97316] text-white space-around items-center text-center transition-all hover:scale-105">
                             <CardHeader className="flex flex-col justify-center items-center w-full">
                                 <div className="size-15  rounded-lg bg-gradient-to-r from-[#F97316] to-[#F97316]/90 shadow-[0_0_5px_#F97316] flex items-center justify-center mb-4">
                                     <Icon icon="solar:settings-bold" className="size-8 text-white" />

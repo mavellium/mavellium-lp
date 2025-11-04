@@ -252,7 +252,7 @@ export default function Servicos() {
                             Entre em contato agora e vamos transformar sua visão em realidade.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-10 w-full sm:w-auto transition-all hover:scale-110">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-10 w-full sm:w-auto">
                             <a
                                 href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa."
                                 target="_blank"
@@ -261,7 +261,7 @@ export default function Servicos() {
                             >
                                 <Button
                                     size="lg"
-                                    className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto flex gap-2 justify-center items-center cursor-pointer"
+                                    className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto flex gap-2 justify-center items-center cursor-pointer transition-all hover:scale-110"
                                 >
                                     <img src="/ic_baseline-whatsapp.svg" alt="WhatsApp" className="w-6" />
                                     Fale com a gente
