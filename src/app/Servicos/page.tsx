@@ -17,7 +17,7 @@ export default function Servicos() {
     }
     return (
         <>
-           <Header></Header>
+            <Header></Header>
 
             <section className="relative w-full flex h-screen justify-end items-center overflow-hidden bg-[#091725] py-16 px-6 md:px-10">
                 <div className="container mx-auto flex items-center justify-between md:gap-20 text-white gap-5">
@@ -40,14 +40,15 @@ export default function Servicos() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-8 w-full sm:w-auto">
-                            <Button
-                                size="lg"
-                                className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto"
+                            <a
+                                href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F"
+                                className="flex gap-2 justify-center items-center"
                             >
-                                <a
-                                    href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F"
-                                    className="flex gap-2 justify-center items-center"
+                                <Button
+                                    size="lg"
+                                    className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto cursor-pointer transition-all hover:scale-110"
                                 >
+
                                     <Icon
                                         icon="solar:rocket-bold"
                                         className="w-6 h-6"
@@ -97,7 +98,7 @@ export default function Servicos() {
                     <div
                         className="grid gap-8 w-full max-w-7xl justify-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                         {/* CARD 1 */}
-                        <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[312px]">
+                        <Card className="group hover:shadow-lg transition-shadow bg-[#010910] border-2 border-[#2554C9] text-white w-full max-w-sm h-[312px]">
                             <CardHeader>
                                 <div className="size-12 rounded-lg bg-gradient-to-br from-[#285AD9] to-[#285AD9]/90 shadow-[0_0_5px_#1E40AF] transition-shadow flex items-center justify-center mb-4">
                                     <Icon icon="solar:rocket-bold" className="size-6 text-white" />
@@ -105,7 +106,7 @@ export default function Servicos() {
                                 <CardTitle className="text-[20px]">Landing Pages de Alta Conversão</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-muted-foreground">
+                                <p className="text-[#E5E5E5]">
                                     Desenvolvidas com foco em performance,
                                     <span className="block">UX e SEO. Otimizadas para campanhas e</span>
                                     vendas.
@@ -117,7 +118,7 @@ export default function Servicos() {
                         </Card>
 
                         {/* CARD 2 */}
-                        <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[312px]">
+                        <Card className="group hover:shadow-lg transition-shadow w-full bg-[#010910] border-2 border-[#2554C9] text-white max-w-sm h-[312px]">
                             <CardHeader>
                                 <div className="size-12 rounded-lg bg-gradient-to-r from-[#1E40AF] to-[#1E40AF]/90 shadow-[0_0_5px_#1E40AF] transition-shadow flex items-center justify-center mb-4">
                                     <Icon icon="solar:cpu-bold" className="size-6 text-white" />
@@ -138,7 +139,7 @@ export default function Servicos() {
                             </CardContent>
                         </Card>
 
-                        
+
                         {/* <Card className="group hover:shadow-lg transition-shadow w-full max-w-sm h-[312px]">
                             <CardHeader>
                                 <div className="size-12 rounded-lg bg-gradient-to-r from-[#6D28D9] to-[#6D28D9]/90 shadow-[0_0_5px_#6D28D9] transition-shadow flex items-center justify-center mb-4">
@@ -214,15 +215,18 @@ export default function Servicos() {
                                 <span className="block">empresa a crescer</span>
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <Button
-                                    size="lg"
-                                    className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] cursor-pointer"
-                                >
-                                    <a href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F" className="flex gap-2 justify-center items-center">
+                                <a href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F"
+                                    className="flex gap-2 justify-center items-center">
+                                    <Button
+                                        size="lg"
+                                        className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] cursor-pointer transition-all hover:scale-110"
+                                    >
+
                                         <img src="/ic_baseline-whatsapp.svg" className="w-6" />
                                         Fale com a gente
-                                    </a>
-                                </Button>
+
+                                    </Button>
+                                </a>
                             </div>
                         </div>
                     </div>

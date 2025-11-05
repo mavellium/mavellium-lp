@@ -23,7 +23,7 @@ export function Solution() {
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-6 place-items-center lg:flex lg:justify-center w-full">
-          <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px]">
+          <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px] bg-[#010910] border-2 border-[#2655CC] text-white transition-all hover:scale-105">
             <a href="/Servicos/LandingPage">
               <CardHeader>
                 <div className="size-12 rounded-lg bg-gradient-to-br from-[#285AD9] to-[#285AD9]/90 flex items-center justify-center mb-4">
@@ -32,7 +32,7 @@ export function Solution() {
                 <CardTitle>Landing Pages de Alta Conversão</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground mt-5">
                   Páginas que encantam e
                   <span className="block">convertem leads com</span>
                   <span className="block">design e performance</span>
@@ -41,7 +41,7 @@ export function Solution() {
               </CardContent>
             </a>
           </Card>
-          <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px]">
+          <Card className="group hover:shadow-lg transition-shadow w-[262px] h-[272px] bg-[#010910] border-2 border-[#2655CC] text-white transition-all hover:scale-105">
             <a href="/Servicos/Institucionais">
               <CardHeader>
                 <div className="size-12 rounded-lg bg-gradient-to-r from-[#1E40AF] to-[#1E40AF]/90 flex items-center justify-center mb-4">
@@ -50,7 +50,7 @@ export function Solution() {
                 <CardTitle>Sites Institucionais que fortalecem sua marca</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground mt-5">
                   Páginas que encantam e
                   <span className="block">convertem leads com</span>
                   <span className="block">design e performance</span>
@@ -91,12 +91,14 @@ export function Solution() {
           </Card> */}
         </div>
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="bg-white/30 text-white">
-            <a href="/Servicos" className="flex justify-center items-center gap-2">
+          <a href="/Servicos" className="flex justify-center items-center gap-2">
+            <Button size="lg" variant="outline" className="bg-white/30 text-white cursor-pointer">
+
               Ver todos os serviços
               <Icon icon="solar:arrow-right-bold" className="size-4" />
-            </a>
-          </Button>
+
+            </Button>
+          </a>
         </div>
       </div>
     </section>

@@ -38,19 +38,21 @@ export default function Servicos() {
                             <span className="block">sua ideia em um projeto digital de alto impacto.</span>
                         </p>
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-8 w-full sm:w-auto">
-                            <Button
-                                size="lg"
-                                className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto"
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-10 w-full sm:w-auto transition-all hover:scale-110">
+                            <a
+                                href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full sm:w-auto cursor-pointer"
                             >
-                                <a
-                                    href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F"
-                                    className="flex gap-2 justify-center items-center"
+                                <Button
+                                    size="lg"
+                                    className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto flex gap-2 justify-center items-center cursor-pointer"
                                 >
-                                    <img src="/ic_baseline-whatsapp.svg" className="w-6" />
+                                    <img src="/ic_baseline-whatsapp.svg" alt="WhatsApp" className="w-6" />
                                     Fale com a gente
-                                </a>
-                            </Button>
+                                </Button>
+                            </a>
                         </div>
                     </div>
 
@@ -61,7 +63,7 @@ export default function Servicos() {
                         </div>
 
                         <img
-                            src="contato-whats.png"
+                            src="/contato-whats.png"
                             alt="Ilustração de serviços digitais"
                             className="relative z-10 max-w-[350px] md:max-w-[450px] lg:max-w-[536px] w-full h-auto rounded-2xl"
                         />
@@ -250,24 +252,21 @@ export default function Servicos() {
                             Entre em contato agora e vamos transformar sua visão em realidade.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <Button
-                                size="lg"
-                                className="w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-5 shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] cursor-pointer text-base sm:text-lg"
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-10 w-full sm:w-auto">
+                            <a
+                                href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full sm:w-auto cursor-pointer"
                             >
-                                <a
-                                    href="https://api.whatsapp.com/send?phone=5514991779502&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20desenvolvimento%20web%20da%20empresa.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20solu%C3%A7%C3%B5es%2C%20tecnologias%20e%20valores%20dispon%C3%ADveis%3F"
-                                    target="_blank"
-                                    className="flex items-center justify-center gap-2"
+                                <Button
+                                    size="lg"
+                                    className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] w-full sm:w-auto flex gap-2 justify-center items-center cursor-pointer transition-all hover:scale-110"
                                 >
-                                    <img
-                                        src="/ic_baseline-whatsapp.svg"
-                                        alt="WhatsApp"
-                                        className="w-5 sm:w-6"
-                                    />
+                                    <img src="/ic_baseline-whatsapp.svg" alt="WhatsApp" className="w-6" />
                                     Fale com a gente
-                                </a>
-                            </Button>
+                                </Button>
+                            </a>
                         </div>
                     </div>
                 </div>
