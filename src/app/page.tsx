@@ -11,7 +11,7 @@ import { Solution } from "@/components/Home/Solution";
 export default function Home() {
   return (
     <>
-    <main>
+    <main className="bg-[#041526]">
     <Header></Header>
     <Headline></Headline>
     <About></About>

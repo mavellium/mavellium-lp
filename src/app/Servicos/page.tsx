@@ -54,8 +54,9 @@ export default function Servicos() {
                                         className="w-6 h-6"
                                     />
                                     Solicitar orçamento
-                                </a>
-                            </Button>
+
+                                </Button>
+                            </a>
 
                             {/* <Button
                                 size="lg"
@@ -113,7 +114,7 @@ export default function Servicos() {
                                 </p>
                                 <a href="/Servicos/LandingPage" className="flex justify-center items-center gap-2 w-full flex justify-start mt-5">
                                     Saiba mais
-                                    </a>
+                                </a>
                             </CardContent>
                         </Card>
 
@@ -133,9 +134,9 @@ export default function Servicos() {
                                     otimizada.
                                 </p>
 
-                                    <a href="/Servicos/Institucional" className="flex justify-center items-center gap-2 w-full flex justify-start mt-5">
+                                <a href="/Servicos/Institucional" className="flex justify-center items-center gap-2 w-full flex justify-start mt-5">
                                     Saiba mais
-                                    </a>
+                                </a>
                             </CardContent>
                         </Card>
 

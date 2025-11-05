@@ -13,8 +13,8 @@ export function About() {
               digital. Criamos soluções digitais sob medida que geram resultado.
             </p>
             <a href="/Sobre">
-            <Button variant="outline" className="mt-5 bg-[#041526] w-[200px] h-auto text-white cursor-pointer">
-              Saiba mais sobre nós
+            <Button variant="outline" className="mt-5 bg-[#041526] h-auto text-white cursor-pointer">
+              Descubra como criamos resultados reais
             </Button>
             </a>
           </div>

@@ -34,8 +34,7 @@ export function NextStep() {
                     className="shadow-lg shadow-primary/20 bg-gradient-to-br from-[#01EE89] to-[#017346] cursor-pointer transition-all hover:scale-110"
                   >
                     <img src="/ic_baseline-whatsapp.svg" className="w-6" />
-                    Fale com a gente
-
+                   Vamos conversar no WhatsApp
                   </Button>
                 </a>
               </div>
