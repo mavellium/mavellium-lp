@@ -9,7 +9,7 @@ export function About() {
       id: 1,
       title: "Site Institucional",
       image: "/headline-bg.png",
-      link: "/Servicos/institucionais",
+      link: "/Servicos/Institucional",
     },
     {
       id: 2,
