@@ -1,9 +1,13 @@
+import { Button } from "@/components/ui/button";
+import { Icon } from "@iconify/react";
+import { Badge } from "@/components/ui/badge";
+
 export function Headline() {
   return (
     <section
-      className="relative w-full flex flex-col h-screen justify-end items-center overflow-hidden rounded-b-[50px] py-20 md:py-32">
+      className="relative w-full flex flex-col h-screen justify-end items-center overflow-hidden bg-white rounded-b-[50px] py-20 md:py-32">
       {/* Imagem de fundo */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 z-10">
         <img
           src="headline-bg.png"
           alt="Background"
@@ -12,7 +16,7 @@ export function Headline() {
       </div>
 
       {/* Efeito de escurecido só embaixo */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
       {/* Conteúdo */}
       <div className="container relative z-10">
