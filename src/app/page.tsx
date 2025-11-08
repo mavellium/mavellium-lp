@@ -17,9 +17,9 @@ export default function Home() {
     <About></About>
     <Solution></Solution>
     {/* <Cases></Cases> */}
-    <Methodology></Methodology>
+    {/* <Methodology></Methodology> */}
     {/* <Clients></Clients> */}
-    <NextStep></NextStep>
+    {/* <NextStep></NextStep> */}
     </main>
     <Footer></Footer>
     <ButtonWhatsapp></ButtonWhatsapp>
