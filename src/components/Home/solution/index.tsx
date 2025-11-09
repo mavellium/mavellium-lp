@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Icon } from "@iconify/react";
 
 export function Solution() {
   return (
@@ -16,11 +15,8 @@ export function Solution() {
               Entendemos seu negócio, público e objetivos.
             </h2>
 
-            <p className="text-base sm:text-lg md:text-xl text-black mb-6 sm:mb-10 leading-relaxed">
-              Mergulhamos no contexto da sua{" "}
-              <span className="block">
-                marca para criar soluções digitais com propósito e resultado.
-              </span>
+            <p className="text-base sm:text-lg md:text-xl text-black font-medium mb-6 sm:mb-10 leading-relaxed">
+              Nossa análise aprofundada garante que cada landing page ou site seja um ímã de conversões para seu público-alvo.
             </p>
 
             <a
@@ -29,10 +25,9 @@ export function Solution() {
             >
               <Button
                 size="lg"
-                className="bg-[#006C49] text-white cursor-pointer rounded-full hover:bg-[#009e6b] transition"
+                className="bg-[#006C49] text-white sm:text-lg md:text-xl cursor-pointer rounded-full hover:bg-[#009e6b] transition"
               >
-                Conheça nossas soluções
-                <Icon icon="solar:arrow-right-bold" className="size-4" />
+                Veja Nossos Estudos de Caso
               </Button>
             </a>
           </div>
@@ -57,7 +52,7 @@ export function Solution() {
               Criamos interfaces que encantam e conectam pessoas.
             </h2>
 
-            <p className="text-base sm:text-lg md:text-xl text-black mb-6 sm:mb-10 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-black font-medium mb-6 sm:mb-10 leading-relaxed">
               Nosso design une estética, clareza e{" "}
               <span className="block">
                 performance, sempre centrado no usuário.
@@ -70,10 +65,9 @@ export function Solution() {
             >
               <Button
                 size="lg"
-                className="bg-[#006C49] text-white cursor-pointer rounded-full hover:bg-[#009e6b] transition"
+                className="bg-[#006C49] text-white sm:text-lg md:text-xl cursor-pointer rounded-full hover:bg-[#009e6b] transition"
               >
-                Conheça nossas soluções
-                <Icon icon="solar:arrow-right-bold" className="size-4" />
+                Veja nosso portfólio
               </Button>
             </a>
           </div>
@@ -98,14 +92,11 @@ export function Solution() {
           {/* Texto */}
           <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left max-w-md space-y-4">
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-4 sm:mb-6">
-              Entendemos seu negócio, público e objetivos.
+              Transformamos design em código limpo e eficiente.
             </h2>
 
-            <p className="text-base sm:text-lg md:text-xl text-black mb-6 sm:mb-10 leading-relaxed">
-              Mergulhamos no contexto da sua{" "}
-              <span className="block">
-                marca para criar soluções digitais com propósito e resultado.
-              </span>
+            <p className="text-base sm:text-lg md:text-xl text-black font-medium mb-6 sm:mb-10 leading-relaxed">
+             Usamos tecnologias modernas para entregar sites rápidos, seguros e otimizados.
             </p>
 
             <a
@@ -114,10 +105,9 @@ export function Solution() {
             >
               <Button
                 size="lg"
-                className="bg-[#006C49] text-white cursor-pointer rounded-full hover:bg-[#009e6b] transition"
+                className="bg-[#006C49] text-white sm:text-lg md:text-xl cursor-pointer rounded-full hover:bg-[#009e6b] transition"
               >
-                Conheça nossas soluções
-                <Icon icon="solar:arrow-right-bold" className="size-4" />
+                Conheça Nossos Casos de Sucesso
               </Button>
             </a>
           </div>
@@ -139,14 +129,11 @@ export function Solution() {
           {/* Texto */}
           <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left max-w-md space-y-4">
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-4 sm:mb-6">
-              Criamos interfaces que encantam e conectam pessoas.
+              Refinamos para máxima performance e conversão.
             </h2>
 
-            <p className="text-base sm:text-lg md:text-xl text-black mb-6 sm:mb-10 leading-relaxed">
-              Nosso design une estética, clareza e{" "}
-              <span className="block">
-                performance, sempre centrado no usuário.
-              </span>
+            <p className="text-base sm:text-lg md:text-xl text-black font-medium mb-6 sm:mb-10 leading-relaxed">
+              Analisamos dados, atraímos clientes prontos para comprar através de SEO e performance para gerar mais conversões.
             </p>
 
             <a
@@ -155,10 +142,9 @@ export function Solution() {
             >
               <Button
                 size="lg"
-                className="bg-[#006C49] text-white cursor-pointer rounded-full hover:bg-[#009e6b] transition"
+                className="bg-[#006C49] text-white sm:text-lg md:text-xl cursor-pointer rounded-full hover:bg-[#009e6b] transition"
               >
-                Conheça nossas soluções
-                <Icon icon="solar:arrow-right-bold" className="size-4" />
+                Veja Como Otimizamos Resultados
               </Button>
             </a>
           </div>

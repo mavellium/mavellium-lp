@@ -1,21 +1,10 @@
 import type { Metadata } from "next";
 import GoogleTagManager from "../components/GoogleTagManager";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Mavellium — Landing Pages e Sites que Geram Resultados",
-  description: "Criamos landing pages e sites institucionais de alta performance. Aumente conversões e destaque sua marca com tecnologia e design Mavellium.",
+  title: "Mavellium | Especialistas em Landing Pages de Alta Conversão",
+  description: "Pare de perder dinheiro com anúncios. Criamos landing pages otimizadas (Velocidade, UX e Copy) que diminuem seu Custo por Lead (CPA) e maximizam seu ROI. Peça um diagnóstico.",
 };
 
 export default function RootLayout({
@@ -25,10 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <GoogleTagManager gtmId="..." />
+      <body className="antialiased">
+        <GoogleTagManager gtmId="GTM-TNLKRFV3" />
         {children}
       </body>
     </html>
