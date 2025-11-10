@@ -8,7 +8,7 @@ export function Solution() {
         className="py-12 sm:py-16 md:py-14 w-full flex justify-center items-center bg-white"
         id="servicos"
       >
-        <div className="container flex flex-col md:flex-row justify-center items-center gap-10 md:gap-30 px-6">
+        <div className="container flex flex-col-reverse md:flex-row justify-center items-center gap-10 md:gap-30 px-6">
           {/* Texto */}
           <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left max-w-md space-y-4">
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-4 sm:mb-6">
@@ -33,11 +33,11 @@ export function Solution() {
           </div>
 
           {/* Imagem */}
-          <div className="flex justify-center items-center lg:block hidden">
+          <div className="flex justify-center items-center">
             <img
               src="/lupa-solution.png"
               alt="Lupa ilustrativa"
-              className="w-40 sm:w-52 md:w-72 lg:w-80 h-auto"
+              className="w-60 sm:w-52 md:w-200 lg:w-80 h-auto"
             />
           </div>
         </div>
@@ -45,7 +45,7 @@ export function Solution() {
 
       {/* --- SEÇÃO 2 --- */}
       <section className="py-12 sm:py-16 md:py-14 w-full flex justify-center items-center bg-white">
-        <div className="container flex flex-col md:flex-row-reverse justify-center items-center gap-10 md:gap-10 px-6">
+        <div className="container flex flex-col-reverse md:flex-row-reverse justify-center items-center gap-10 md:gap-10 px-6">
           {/* Texto */}
           <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left max-w-md space-y-4">
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-4 sm:mb-6">
@@ -73,11 +73,11 @@ export function Solution() {
           </div>
 
           {/* Imagem */}
-          <div className="flex justify-center items-center lg:block hidden">
+          <div className="flex justify-center items-center">
             <img
               src="/interface-solution.png"
               alt="Interface ilustrativa"
-              className="w-40 sm:w-52 md:w-[400px] lg:w-[580px] h-auto"
+              className="w-100 sm:w-100 md:w-200 lg:w-[580px] h-auto"
             />
           </div>
         </div>
@@ -88,7 +88,7 @@ export function Solution() {
         className="py-12 sm:py-16 md:py-14 w-full flex justify-center items-center bg-white"
         id="servicos"
       >
-        <div className="container flex flex-col md:flex-row justify-center items-center gap-10 md:gap-10 px-6">
+        <div className="container flex flex-col-reverse md:flex-row justify-center items-center gap-10 md:gap-10 px-6">
           {/* Texto */}
           <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left max-w-md space-y-4">
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-4 sm:mb-6">
@@ -113,11 +113,11 @@ export function Solution() {
           </div>
 
           {/* Imagem */}
-          <div className="flex justify-center items-center lg:block hidden">
+          <div className="flex justify-center items-center">
             <img
               src="/design-solution.png"
               alt="Lupa ilustrativa"
-              className="w-40 sm:w-52 md:w-72 lg:w-150 h-auto"
+              className="w-100 sm:w-100 md:w-200 lg:w-150 h-auto"
             />
           </div>
         </div>
@@ -125,7 +125,7 @@ export function Solution() {
 
       {/* --- SEÇÃO 4 --- */}
       <section className="py-12 sm:py-16 md:py-14 w-full flex justify-center items-center bg-white">
-        <div className="container flex flex-col md:flex-row-reverse justify-center items-center gap-10 md:gap-20 px-6">
+        <div className="container flex flex-col-reverse md:flex-row-reverse justify-center items-center gap-10 md:gap-20 px-6">
           {/* Texto */}
           <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left max-w-md space-y-4">
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-4 sm:mb-6">
@@ -150,11 +150,11 @@ export function Solution() {
           </div>
 
           {/* Imagem */}
-          <div className="flex justify-center items-center lg:block hidden">
+          <div className="flex justify-center items-center">
             <img
               src="/performace-solution.png"
               alt="Interface ilustrativa"
-              className="w-40 sm:w-52 md:w-[400px] lg:w-[580px] h-auto"
+              className="w-100 sm:w-100 md:w-200 lg:w-[580px] h-auto"
             />
           </div>
         </div>
