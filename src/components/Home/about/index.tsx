@@ -10,7 +10,7 @@ export function About() {
     {
       id: 1,
       title: "Site Institucional",
-      image: "/headline-bg.png",
+      image: "/Institucional.png",
       link: "/Servicos/Institucional",
       description: "Ter mais posicionamento",
     },
@@ -24,10 +24,10 @@ export function About() {
     {
       id: 3,
       title: "Landing Page",
-      image: "/headline-bg.png",
+      image: "/LandingPage.png",
       link: "/Servicos/LandingPage",
       description: "Aumentar seu ROI e diminuir seu CAC",
-    }
+    },
   ];
 
   const [centerIndex, setCenterIndex] = useState(1);

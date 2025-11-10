@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && node rename-html.js && node fix-links.js",
+    "build": "next build && node rename-html.js",
     "start": "npx serve out"
   },
   "dependencies": {

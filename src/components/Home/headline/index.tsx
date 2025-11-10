@@ -16,7 +16,7 @@ export function Headline() {
 
       {/* Conteúdo */}
       <div className="container relative z-10">
-        <div className="lg:mx-0 mx-auto lg:max-w-4xl md:max-w-4xl text-white text-center lg:text-start space-y-8">
+        <div className="lg:mx-0 mx-auto px-15 lg:max-w-4xl md:max-w-4xl text-white text-center lg:text-start space-y-8">
           <h1 className="font-heading text-4xl md:text-6xl font-semibold tracking-tight">
             Transformamos presença digital em performance real
           </h1>
