@@ -48,35 +48,39 @@ export function Cases() {
   // Detecta largura da tela
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
-    handleResize(); // inicializa
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // autoplay (somente desktop)
-  useEffect(() => {
-    if (!isPlaying) return;
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % cards.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [isPlaying, cards.length]);
+  const isMobile = windowWidth !== null && windowWidth < 768;
 
-  // controla o autoplay do Swiper no mobile
   useEffect(() => {
-    if (swiperRef.current) {
-      if (isPlaying) {
-        swiperRef.current.autoplay?.start();
-      } else {
-        swiperRef.current.autoplay?.stop();
-      }
+  // autoplay apenas no desktop
+  if (isMobile || !isPlaying) return;
+
+  const interval = setInterval(() => {
+    setActiveIndex((prev) => (prev + 1) % cards.length);
+  }, 5000);
+
+  return () => clearInterval(interval);
+}, [isMobile, isPlaying, cards.length]);
+
+// controla o autoplay do Swiper no mobile
+useEffect(() => {
+  if (!swiperRef.current) return;
+
+  if (isMobile) {
+    if (isPlaying) {
+      swiperRef.current.autoplay?.start();
+    } else {
+      swiperRef.current.autoplay?.stop();
     }
-  }, [isPlaying]);
+  }
+}, [isMobile, isPlaying]);
 
-  // evita renderizar antes do cliente (SSR safe)
+
   if (windowWidth === null) return null;
-
-  const isMobile = windowWidth < 768;
 
   return (
     <section
@@ -90,7 +94,7 @@ export function Cases() {
 
         {/* 🟢 MOBILE - Swiper */}
         {isMobile && (
-          <div className="w-full">
+          <div className="w-full overflow-visible">
             <Swiper
               modules={[Autoplay]}
               onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -99,23 +103,24 @@ export function Cases() {
                 disableOnInteraction: false,
               }}
               centeredSlides={true}
+              slidesPerView={0.9}
               spaceBetween={16}
-              slidesPerView={0.9} // ocupa quase toda a tela
               onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
               className="w-full"
             >
               {cards.map((card, index) => (
-                <SwiperSlide key={card.id}>
+                <SwiperSlide key={card.id} className="overflow-visible">
                   <motion.div
                     onClick={() => setActiveIndex(index)}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.2 }}
                     className="flex flex-col items-center"
                   >
-                    <div className="relative overflow-hidden rounded-2xl shadow-md cursor-pointer w-full">
+                    {/* 🔧 Card principal mobile ajustado */}
+                    <div className="relative overflow-hidden rounded-2xl shadow-md cursor-pointer w-[92vw] max-w-[600px] mx-auto">
                       <img
                         src={card.image}
-                        className="object-cover w-full h-[380px] rounded-2xl"
+                        className="object-cover w-full h-[340px] sm:h-[360px] rounded-2xl"
                       />
                     </div>
 
@@ -125,7 +130,7 @@ export function Cases() {
                       transition={{ duration: 0.3 }}
                       className="mt-4 rounded-2xl flex flex-col items-start p-4 w-[90%]"
                     >
-                      <p className="text-gray-700 text-start  mb-2">
+                      <p className="text-gray-700 text-start mb-2">
                         {card.description}
                       </p>
                       <a
@@ -140,7 +145,7 @@ export function Cases() {
               ))}
             </Swiper>
 
-            {/* Dots (navegação) */}
+            {/* 🔘 Dots */}
             <div className="flex justify-center gap-2 mt-6">
               {cards.map((_, index) => (
                 <button
@@ -179,130 +184,128 @@ export function Cases() {
           </div>
         )}
 
-        {/* 🟣 DESKTOP - Cards com transição suave sem saltos */}
+        {/* 🟣 DESKTOP */}
         {!isMobile && (
-          <div className="flex justify-center flex-wrap gap-6 md:gap-1 relative">
-            {cards.map((card, index) => {
-              const isActive = index === activeIndex;
-              const activeWidth = windowWidth < 1024 ? 260 : 320;
-              const inactiveWidth = windowWidth < 1024 ? 140 : 160;
+          <>
+            <div className="flex justify-center flex-wrap gap-6 md:gap-2 relative">
+              {cards.map((card, index) => {
+                const isActive = index === activeIndex;
+                const activeWidth = windowWidth < 1024 ? 260 : 320;
+                const inactiveWidth = windowWidth < 1024 ? 140 : 160;
 
-              return (
-                <motion.div
-                  key={card.id}
-                  layout
-                  className="flex flex-col items-center relative"
-                  transition={{
-                    duration: 0.4,
-                    ease: [0.4, 0, 0.2, 1],
-                  }}
-                  style={{ minWidth: inactiveWidth }}
-                >
-                  {/* Card principal */}
+                return (
                   <motion.div
+                    key={card.id}
                     layout
-                    onClick={() => setActiveIndex(index)}
-                    animate={{
-                      opacity: isActive ? 1 : 0.6,
-                      width: isActive ? activeWidth : inactiveWidth,
-                      scale: isActive ? 1 : 0.97,
-                    }}
+                    className="flex flex-col items-center relative"
                     transition={{
                       duration: 0.4,
                       ease: [0.4, 0, 0.2, 1],
                     }}
-                    className={`relative cursor-pointer overflow-hidden rounded-2xl shadow-md ${
-                      isActive ? "ring-2 ring-[#04A15E]" : "ring-0"
-                    }`}
+                    style={{ minWidth: inactiveWidth }}
                   >
-                    <motion.img
-                      layout
-                      src={card.image}
-                      alt={card.description}
-                      className="object-cover rounded-2xl w-full h-[360px]"
-                      transition={{
-                        duration: 0.4,
-                        ease: [0.4, 0, 0.2, 1],
-                      }}
-                    />
                     <motion.div
                       layout
-                      className={`absolute inset-0 flex justify-center items-center text-white ${
-                        isActive ? "bg-black/20" : "bg-black/50"
-                      }`}
+                      onClick={() => setActiveIndex(index)}
+                      animate={{
+                        opacity: isActive ? 1 : 0.6,
+                        width: isActive ? activeWidth : inactiveWidth,
+                        scale: isActive ? 1 : 0.97,
+                      }}
                       transition={{
                         duration: 0.4,
                         ease: [0.4, 0, 0.2, 1],
                       }}
-                    />
-                  </motion.div>
-
-                  {/* Descrição alinhada à esquerda com link de texto */}
-                  <AnimatePresence mode="sync">
-                    {isActive && (
-                      <motion.div
-                        key={`desc-${card.id}`}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
+                      className={`relative cursor-pointer overflow-hidden rounded-2xl shadow-md ${
+                        isActive ? "ring-2 ring-[#04A15E]" : "ring-0"
+                      }`}
+                    >
+                      <motion.img
+                        layout
+                        src={card.image}
+                        alt={card.description}
+                        className="object-cover rounded-2xl w-full h-[360px]"
                         transition={{
                           duration: 0.4,
                           ease: [0.4, 0, 0.2, 1],
                         }}
-                        className="absolute top-full mt-4 rounded-2xl p-5 z-10 flex flex-col items-start text-left"
-                        style={{ width: activeWidth, maxWidth: 360 }}
-                      >
-                        <p className="text-gray-700 text-sm md:text-base mb-3 leading-relaxed">
-                          {card.description}
-                        </p>
-                        <a
-                          href={card.link}
-                          className="text-[#04A15E] underline hover:text-[#037a45] transition-colors duration-200 font-medium"
-                        >
-                          Saiba mais
-                        </a>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              );
-            })}
-          </div>
-        )}
+                      />
+                      <motion.div
+                        layout
+                        className={`absolute inset-0 flex justify-center items-center text-white ${
+                          isActive ? "bg-black/20" : "bg-black/50"
+                        }`}
+                        transition={{
+                          duration: 0.4,
+                          ease: [0.4, 0, 0.2, 1],
+                        }}
+                      />
+                    </motion.div>
 
-        {/* ⚙️ Controles Desktop */}
-        {!isMobile && (
-          <div className="flex flex-col items-center gap-3 mt-56">
-            <div className="flex gap-2 sm:gap-3">
-              {cards.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveIndex(index)}
-                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                    index === activeIndex
-                      ? "bg-[#04A15E] scale-125"
-                      : "bg-gray-400 hover:bg-gray-500"
-                  }`}
-                ></button>
-              ))}
+                    <AnimatePresence mode="sync">
+                      {isActive && (
+                        <motion.div
+                          key={`desc-${card.id}`}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -10 }}
+                          transition={{
+                            duration: 0.4,
+                            ease: [0.4, 0, 0.2, 1],
+                          }}
+                          className="absolute top-full mt-4 rounded-2xl p-5 z-10 flex flex-col items-start text-left"
+                          style={{ width: activeWidth, maxWidth: 360 }}
+                        >
+                          <p className="text-gray-700 text-sm md:text-base mb-3 leading-relaxed">
+                            {card.description}
+                          </p>
+                          <a
+                            href={card.link}
+                            className="text-[#04A15E] underline hover:text-[#037a45] transition-colors duration-200 font-medium"
+                          >
+                            Saiba mais
+                          </a>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                );
+              })}
             </div>
 
-            <Button
-              onClick={() => setIsPlaying((prev) => !prev)}
-              variant="outline"
-              className="flex items-center gap-2 bg-white/60 backdrop-blur-md border-gray-300 text-black hover:bg-gray-100 rounded-full px-4 py-2 shadow-sm"
-            >
-              {isPlaying ? (
-                <>
-                  <Pause className="w-4 h-4" /> Pausar
-                </>
-              ) : (
-                <>
-                  <Play className="w-4 h-4" /> Reproduzir
-                </>
-              )}
-            </Button>
-          </div>
+            {/* ⚙️ Controles Desktop */}
+            <div className="flex flex-col items-center gap-3 mt-56">
+              <div className="flex gap-2 sm:gap-3">
+                {cards.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveIndex(index)}
+                    className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                      index === activeIndex
+                        ? "bg-[#04A15E] scale-125"
+                        : "bg-gray-400 hover:bg-gray-500"
+                    }`}
+                  ></button>
+                ))}
+              </div>
+
+              <Button
+                onClick={() => setIsPlaying((prev) => !prev)}
+                variant="outline"
+                className="flex items-center gap-2 bg-white/60 backdrop-blur-md border-gray-300 text-black hover:bg-gray-100 rounded-full px-4 py-2 shadow-sm"
+              >
+                {isPlaying ? (
+                  <>
+                    <Pause className="w-4 h-4" /> Pausar
+                  </>
+                ) : (
+                  <>
+                    <Play className="w-4 h-4" /> Reproduzir
+                  </>
+                )}
+              </Button>
+            </div>
+          </>
         )}
       </div>
     </section>
