@@ -10,14 +10,14 @@ export function About() {
     {
       id: 1,
       title: "Site Institucional",
-      image: "/Institucional.png",
+      image: "/Setor-1.png",
       link: "/Servicos/Institucional",
       description: "Ter mais posicionamento",
     },
     {
       id: 3,
       title: "Landing Page",
-      image: "/LandingPage.png",
+      image: "/Setor-2.png",
       link: "/Servicos/LandingPage",
       description: "Aumentar seu ROI e diminuir seu CAC",
     },
@@ -111,13 +111,9 @@ export function About() {
                   >
                     <img
                       src={card.image}
-                      alt={card.title}
                       className="w-[200px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[320px] md:h-[400px] object-cover rounded-2xl"
                     />
                     <div className="absolute inset-0 bg-black/25 flex flex-col justify-center items-center">
-                      <h3 className="text-white font-semibold text-sm sm:text-3xl mb-2 drop-shadow-md text-center">
-                        {card.title}
-                      </h3>
                       <a href={card.link} className="absolute bottom-3 sm:bottom-8">
                         <Button
                           variant="outline"

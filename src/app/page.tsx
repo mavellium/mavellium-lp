@@ -6,6 +6,7 @@ import { Headline } from "@/components/Home/Headline";
 import { Methodology } from "@/components/Home/Methodology";
 import { NextStep } from "@/components/Home/NextStep";
 import { Solution } from "@/components/Home/Solution";
+import { Cases } from "@/components/Home/Cases";
 
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
     <Headline></Headline>
     <About></About>
     <Solution></Solution>
-    {/* <Cases></Cases> */}
+    <Cases></Cases>
     {/* <Methodology></Methodology> */}
     {/* <Clients></Clients> */}
     {/* <NextStep></NextStep> */}
