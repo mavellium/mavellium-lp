@@ -123,15 +123,16 @@ export function Cases() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="mt-4 bg-white shadow-md rounded-2xl p-4 w-[90%]"
+                      className="mt-4 rounded-2xl flex flex-col items-start p-4 w-[90%]"
                     >
-                      <p className="text-gray-700 text-base mb-2">
+                      <p className="text-gray-700 text-start  mb-2">
                         {card.description}
                       </p>
-                      <a href={card.link}>
-                        <Button className="bg-[#04A15E] hover:bg-[#039456] text-white rounded-full px-4 py-2 text-base shadow-md hover:shadow-lg transition-all">
-                          Saiba mais
-                        </Button>
+                      <a
+                        href={card.link}
+                        className="text-[#04A15E] underline hover:text-[#037a45] transition-colors duration-200 font-medium"
+                      >
+                        Saiba mais
                       </a>
                     </motion.div>
                   </motion.div>
@@ -178,61 +179,92 @@ export function Cases() {
           </div>
         )}
 
-        {/* 🟣 DESKTOP - Cards fixos */}
+        {/* 🟣 DESKTOP - Cards com transição suave sem saltos */}
         {!isMobile && (
-          <div className="flex justify-center flex-wrap gap-4 md:gap-5">
+          <div className="flex justify-center flex-wrap gap-6 md:gap-1 relative">
             {cards.map((card, index) => {
               const isActive = index === activeIndex;
               const activeWidth = windowWidth < 1024 ? 260 : 320;
               const inactiveWidth = windowWidth < 1024 ? 140 : 160;
 
               return (
-                <div key={card.id} className="flex flex-col items-center">
+                <motion.div
+                  key={card.id}
+                  layout
+                  className="flex flex-col items-center relative"
+                  transition={{
+                    duration: 0.4,
+                    ease: [0.4, 0, 0.2, 1],
+                  }}
+                  style={{ minWidth: inactiveWidth }}
+                >
+                  {/* Card principal */}
                   <motion.div
+                    layout
                     onClick={() => setActiveIndex(index)}
                     animate={{
                       opacity: isActive ? 1 : 0.6,
                       width: isActive ? activeWidth : inactiveWidth,
+                      scale: isActive ? 1 : 0.97,
                     }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className={`relative cursor-pointer overflow-hidden rounded-2xl shadow-md transition-all duration-100 ${
+                    transition={{
+                      duration: 0.4,
+                      ease: [0.4, 0, 0.2, 1],
+                    }}
+                    className={`relative cursor-pointer overflow-hidden rounded-2xl shadow-md ${
                       isActive ? "ring-2 ring-[#04A15E]" : "ring-0"
                     }`}
                   >
-                    <img
+                    <motion.img
+                      layout
                       src={card.image}
-                      className="object-cover rounded-2xl w-full h-[360px] transition-all duration-100"
+                      alt={card.description}
+                      className="object-cover rounded-2xl w-full h-[360px]"
+                      transition={{
+                        duration: 0.4,
+                        ease: [0.4, 0, 0.2, 1],
+                      }}
                     />
-                    <div
-                      className={`absolute inset-0 flex flex-col justify-center items-center text-white transition-all duration-100 ${
+                    <motion.div
+                      layout
+                      className={`absolute inset-0 flex justify-center items-center text-white ${
                         isActive ? "bg-black/20" : "bg-black/50"
                       }`}
-                    ></div>
+                      transition={{
+                        duration: 0.4,
+                        ease: [0.4, 0, 0.2, 1],
+                      }}
+                    />
                   </motion.div>
 
-                  {/* descrição do card ativo */}
-                  <AnimatePresence>
+                  {/* Descrição alinhada à esquerda com link de texto */}
+                  <AnimatePresence mode="sync">
                     {isActive && (
                       <motion.div
+                        key={`desc-${card.id}`}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.3 }}
-                        className="mt-4 bg-white shadow-lg rounded-2xl p-4"
-                        style={{ width: activeWidth }}
+                        transition={{
+                          duration: 0.4,
+                          ease: [0.4, 0, 0.2, 1],
+                        }}
+                        className="absolute top-full mt-4 rounded-2xl p-5 z-10 flex flex-col items-start text-left"
+                        style={{ width: activeWidth, maxWidth: 360 }}
                       >
-                        <p className="text-gray-700 text-sm md:text-base mb-2">
+                        <p className="text-gray-700 text-sm md:text-base mb-3 leading-relaxed">
                           {card.description}
                         </p>
-                        <a href={card.link}>
-                          <Button className="bg-[#04A15E] hover:bg-[#039456] text-white rounded-full px-4 py-2 text-sm md:text-base shadow-md hover:shadow-lg transition-all">
-                            Saiba mais
-                          </Button>
+                        <a
+                          href={card.link}
+                          className="text-[#04A15E] underline hover:text-[#037a45] transition-colors duration-200 font-medium"
+                        >
+                          Saiba mais
                         </a>
                       </motion.div>
                     )}
                   </AnimatePresence>
-                </div>
+                </motion.div>
               );
             })}
           </div>
@@ -240,7 +272,7 @@ export function Cases() {
 
         {/* ⚙️ Controles Desktop */}
         {!isMobile && (
-          <div className="flex flex-col items-center gap-3 mt-16">
+          <div className="flex flex-col items-center gap-3 mt-56">
             <div className="flex gap-2 sm:gap-3">
               {cards.map((_, index) => (
                 <button
