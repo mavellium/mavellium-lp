@@ -1,156 +1,140 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, EffectCoverflow, Autoplay } from "swiper/modules";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
 import { Pause, Play } from "lucide-react";
 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
+
 export function About() {
-  const cards = [
+  const slides = [
     {
-      id: 1,
-      title: "Site Institucional",
-      image: "/Setor-1.png",
-      link: "/Servicos/Institucional",
-      description: "Ter mais posicionamento",
+      title: "The Suicide Squad",
+      img: "https://carousel-slider.uiinitiative.com/images/suicide-squad.jpg",
+      desc: "Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons join Task Force X.",
     },
     {
-      id: 3,
-      title: "Landing Page",
-      image: "/Setor-2.png",
-      link: "/Servicos/LandingPage",
-      description: "Aumentar seu ROI e diminuir seu CAC",
+      title: "Thor: Ragnarok",
+      img: "https://carousel-slider.uiinitiative.com/images/thor-ragnarok.jpg",
+      desc: "Imprisoned on Sakaar, Thor must race against time to stop Ragnarök and Hela.",
+    },
+    {
+      title: "Doctor Strange",
+      img: "https://carousel-slider.uiinitiative.com/images/dr-strange.jpg",
+      desc: "America Chavez and Stephen Strange face multiversal threats in search of the Book of Vishanti.",
     },
   ];
 
-  const [centerIndex, setCenterIndex] = useState(1);
-  const [direction, setDirection] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [swiperInstance, setSwiperInstance] = useState<any>(null);
 
-  // 🔧 Calcula posições de forma dinâmica e responsiva
-  const getPositionProps = (index: number) => {
-    const relativeIndex = (index - centerIndex + cards.length) % cards.length;
-
-    const isSmall = typeof window !== "undefined" && window.innerWidth < 640;
-    const offset = isSmall ? 140 : 220; // menor espaçamento em mobile
-
-    if (relativeIndex === cards.length - 1) {
-      return { x: -offset, scale: 0.85, opacity: 0.6, zIndex: 1 };
-    }
-
-    if (relativeIndex === 0) {
-      return { x: 0, scale: 1.1, opacity: 1, zIndex: 3 };
-    }
-
-    if (relativeIndex === 1) {
-      return { x: offset, scale: 0.85, opacity: 0.6, zIndex: 1 };
-    }
-
-    return { x: 0, scale: 0.8, opacity: 0, zIndex: 0 };
+  const togglePlay = () => {
+    if (!swiperInstance) return;
+    if (isPlaying) swiperInstance.autoplay.stop();
+    else swiperInstance.autoplay.start();
+    setIsPlaying(!isPlaying);
   };
 
-  const handleDragEnd = (_: any, info: any) => {
-    if (info.offset.x > 80) {
-      setDirection(-1);
-      setCenterIndex((prev) => (prev - 1 + cards.length) % cards.length);
-    } else if (info.offset.x < -80) {
-      setDirection(1);
-      setCenterIndex((prev) => (prev + 1) % cards.length);
-    }
+  const goToSlide = (index: number) => {
+    if (!swiperInstance) return;
+    swiperInstance.slideToLoop(index); // Vai para o slide desejado mesmo com loop
+    setActiveIndex(index);
   };
-
-  useEffect(() => {
-    if (!isPlaying) return;
-    const interval = setInterval(() => {
-      setDirection(1);
-      setCenterIndex((prev) => (prev + 1) % cards.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [isPlaying, cards.length]);
 
   return (
-    <section className="py-12 md:py-20 w-full flex flex-col justify-center items-center bg-white" id="sobre">
-      <div className="container flex flex-col justify-center items-center text-center">
-        <h2 className="font-heading max-w-3xl text-xl sm:text-2xl md:text-4xl font-bold text-black mb-4 px-2 md:mb-6">
+    <section className="w-full py-16 flex flex-col justify-center items-center">
+      <div className="container flex flex-col items-center text-center text-black">
+        <h1 className="text-lg sm:text-4xl font-semibold max-w-4xl px-4 mb-10">
           Mais do que código, criamos experiências digitais que impulsionam negócios.
-        </h2>
+        </h1>
 
-        <div className="relative flex justify-center items-center h-12 sm:h-16 md:h-20 mb-5 sm:mb-6 overflow-hidden">
-          <div className="w-[180px] sm:w-[240px] md:w-[300px] text-center">
-            <AnimatePresence mode="wait" custom={direction}>
-              <motion.p
-                key={centerIndex}
-                initial={{ opacity: 0, y: direction > 0 ? 20 : -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: direction > 0 ? -20 : 20 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="text-center text-base sm:text-xl md:text-2xl text-black font-semibold leading-snug px-2"
-              >
-                {cards[centerIndex]?.description ?? "Carregando..."}
-              </motion.p>
-            </AnimatePresence>
-          </div>
+        {/* 🔹 Descrição animada do slide ativo */}
+        <div className="relative h-20 sm:h-24 mb-6 flex justify-center items-center overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={activeIndex}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="text-center text-md sm:text-lg font-light max-w-lg px-4"
+            >
+              {slides[activeIndex].desc}
+            </motion.p>
+          </AnimatePresence>
         </div>
 
-        {/* 🟢 Carrossel centralizado e responsivo */}
-        <div className="relative w-full flex justify-center items-center h-[240px] sm:h-[350px] md:h-[440px] overflow-hidden select-none mb-6">
-          <div className="relative w-[260px] sm:w-[600px] md:w-[800px] flex justify-center items-center">
-            <AnimatePresence initial={false} custom={direction}>
-              {cards.map((card, index) => {
-                const { x, scale, opacity, zIndex } = getPositionProps(index);
-                return (
-                  <motion.div
-                    key={card.id}
-                    animate={{ x, scale, opacity, zIndex }}
-                    transition={{ duration: 0.6, ease: "easeInOut" }}
-                    className="absolute cursor-grab active:cursor-grabbing rounded-2xl overflow-hidden shadow-lg"
-                    drag="x"
-                    dragConstraints={{ left: 0, right: 0 }}
-                    dragElastic={0.25}
-                    onDragEnd={handleDragEnd}
-                  >
-                    <img
-                      src={card.image}
-                      className="w-[200px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[320px] md:h-[400px] object-cover rounded-2xl"
-                    />
-                    <div className="absolute inset-0 bg-black/25 flex flex-col justify-center items-center">
-                      <a href={card.link} className="absolute bottom-3 sm:bottom-8">
-                        <Button
-                          variant="outline"
-                          className="bg-black/10 backdrop-blur-xl border-white/60 text-white hover:bg-white hover:text-black text-xs sm:text-sm md:text-lg md:px-5 md:py-5 rounded-full shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
-                        >
-                          Saiba mais
-                        </Button>
-                      </a>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </AnimatePresence>
-          </div>
+        {/* 🌀 Carrossel 3D */}
+        <Swiper
+          modules={[Navigation, EffectCoverflow, Autoplay]}
+          effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={3}
+          loop={false}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 60,
+            depth: 120,
+            modifier: 2,
+            slideShadows: true,
+          }}
+          navigation={false}
+          onSwiper={setSwiperInstance}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+          
+          className="w-full max-w-6xl"
+        >
+          {slides.map((s, i) => (
+            <SwiperSlide
+              key={i}
+              className="w-[320px] md:w-[400px] lg:w-[460px] bg-[#041526] rounded-2xl overflow-hidden shadow-xl"
+            >
+              <div className="relative h-[400px] flex flex-col">
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  className="h-full w-full object-cover"
+                />
+                <div className=" text-white">
+                  
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* 🔘 Paginação customizada */}
+        <div className="flex gap-2 sm:gap-3 mt-6">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                index === activeIndex
+                  ? "bg-[#04A15E] scale-125"
+                  : "bg-gray-400 hover:bg-gray-500"
+              }`}
+            ></button>
+          ))}
         </div>
 
-        {/* ⚙️ Controles */}
-        <div className="flex flex-col items-center gap-2 sm:gap-3">
-          <div className="flex gap-2 sm:gap-3">
-            {cards.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  setDirection(index > centerIndex ? 1 : -1);
-                  setCenterIndex(index);
-                }}
-                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                  index === centerIndex ? "bg-[#04A15E] scale-125" : "bg-gray-400 hover:bg-gray-500"
-                }`}
-              ></button>
-            ))}
-          </div>
-
+        {/* ⚙️ Botão Pausar/Reproduzir */}
+        <div className="mt-8">
           <Button
-            onClick={() => setIsPlaying((prev) => !prev)}
+            onClick={togglePlay}
             variant="outline"
-            className="flex items-center gap-2 bg-white/50 backdrop-blur-lg border-gray-300 text-black hover:bg-gray-100 rounded-full px-4 py-2 shadow-sm"
+            className="flex items-center gap-2 bg-white/60 backdrop-blur-md border-gray-300 text-black hover:bg-gray-100 rounded-full px-4 py-2 shadow-sm"
           >
             {isPlaying ? (
               <>
