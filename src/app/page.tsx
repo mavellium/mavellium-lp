@@ -7,6 +7,7 @@ import { Methodology } from "@/components/Home/Methodology";
 import { NextStep } from "@/components/Home/NextStep";
 import { Solution } from "@/components/Home/Solution";
 import { Cases } from "@/components/Home/Cases";
+import { Clients } from "@/components/Home/Clients";
 
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
     <Solution></Solution>
     <Cases></Cases>
     {/* <Methodology></Methodology> */}
-    {/* <Clients></Clients> */}
+    <Clients></Clients>
     {/* <NextStep></NextStep> */}
     </main>
     <Footer></Footer>
