@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
-import { Pause, Play } from "lucide-react";
+import { Icon } from '@iconify/react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -56,31 +56,40 @@ export function Cases() {
   const isMobile = windowWidth !== null && windowWidth < 768;
 
   useEffect(() => {
-  // autoplay apenas no desktop
-  if (isMobile || !isPlaying) return;
+    // autoplay apenas no desktop
+    if (isMobile || !isPlaying) return;
 
-  const interval = setInterval(() => {
-    setActiveIndex((prev) => (prev + 1) % cards.length);
-  }, 5000);
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % cards.length);
+    }, 5000);
 
-  return () => clearInterval(interval);
-}, [isMobile, isPlaying, cards.length]);
+    return () => clearInterval(interval);
+  }, [isMobile, isPlaying, cards.length]);
 
-// controla o autoplay do Swiper no mobile
-useEffect(() => {
-  if (!swiperRef.current) return;
+  // controla o autoplay do Swiper no mobile
+  useEffect(() => {
+    if (!swiperRef.current) return;
 
-  if (isMobile) {
-    if (isPlaying) {
-      swiperRef.current.autoplay?.start();
-    } else {
-      swiperRef.current.autoplay?.stop();
+    if (isMobile) {
+      if (isPlaying) {
+        swiperRef.current.autoplay?.start();
+      } else {
+        swiperRef.current.autoplay?.stop();
+      }
     }
-  }
-}, [isMobile, isPlaying]);
-
+  }, [isMobile, isPlaying]);
 
   if (windowWidth === null) return null;
+
+  // Função para navegar para um slide específico
+  const goToSlide = (index: number) => {
+    if (isMobile) {
+      setActiveIndex(index);
+      swiperRef.current?.slideTo(index);
+    } else {
+      setActiveIndex(index);
+    }
+  };
 
   return (
     <section
@@ -144,43 +153,6 @@ useEffect(() => {
                 </SwiperSlide>
               ))}
             </Swiper>
-
-            {/* 🔘 Dots */}
-            <div className="flex justify-center gap-2 mt-6">
-              {cards.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setActiveIndex(index);
-                    swiperRef.current?.slideTo(index);
-                  }}
-                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                    index === activeIndex
-                      ? "bg-[#04A15E] scale-125"
-                      : "bg-gray-400 hover:bg-gray-500"
-                  }`}
-                />
-              ))}
-            </div>
-
-            {/* 🔘 Botão de pausa / continuar (MOBILE) */}
-            <div className="flex justify-center mt-6">
-              <Button
-                onClick={() => setIsPlaying((prev) => !prev)}
-                variant="outline"
-                className="flex items-center gap-2 bg-white/70 backdrop-blur-md border-gray-300 text-black hover:bg-gray-100 rounded-full px-4 py-2 shadow-sm"
-              >
-                {isPlaying ? (
-                  <>
-                    <Pause className="w-4 h-4" /> Pausar
-                  </>
-                ) : (
-                  <>
-                    <Play className="w-4 h-4" /> Reproduzir
-                  </>
-                )}
-              </Button>
-            </div>
           </div>
         )}
 
@@ -272,41 +244,41 @@ useEffect(() => {
                 );
               })}
             </div>
-
-            {/* ⚙️ Controles Desktop */}
-            <div className="flex flex-col items-center gap-3 mt-56">
-              <div className="flex gap-2 sm:gap-3">
-                {cards.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveIndex(index)}
-                    className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                      index === activeIndex
-                        ? "bg-[#04A15E] scale-125"
-                        : "bg-gray-400 hover:bg-gray-500"
-                    }`}
-                  ></button>
-                ))}
-              </div>
-
-              <Button
-                onClick={() => setIsPlaying((prev) => !prev)}
-                variant="outline"
-                className="flex items-center gap-2 bg-white/60 backdrop-blur-md border-gray-300 text-black hover:bg-gray-100 rounded-full px-4 py-2 shadow-sm"
-              >
-                {isPlaying ? (
-                  <>
-                    <Pause className="w-4 h-4" /> Pausar
-                  </>
-                ) : (
-                  <>
-                    <Play className="w-4 h-4" /> Reproduzir
-                  </>
-                )}
-              </Button>
-            </div>
           </>
         )}
+
+        {/* 🔘 CONTROLES PADRONIZADOS - Dots + Play/Pause */}
+        <div className="flex items-center justify-center mt-50 gap-4">
+          {/* Dots no estilo Nubank */}
+          <div className="flex gap-2 bg-[#DBDBDB] h-10 w-auto p-5 rounded-full justify-center items-center">
+            {cards.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`h-1 rounded-full transition-all duration-300 ${
+                  index === activeIndex
+                    ? "bg-black w-8 h-2"  // Ativo - preto e largura maior
+                    : "bg-[#ACACAC] w-2 h-2 hover:bg-black"  // Inativos
+                }`}
+              ></button>
+            ))}
+          </div>
+
+          {/* Botão Play/Pause padronizado */}
+          <div>
+            <Button
+              onClick={() => setIsPlaying((prev) => !prev)}
+              variant="outline"
+              className="flex items-center bg-[#DBDBDB] backdrop-blur-md border-gray-300 text-black hover:bg-gray-100 rounded-full px-4 py-2 shadow-sm"
+            >
+              {isPlaying ? (
+                <Icon icon="solar:pause-bold" className="w-5 h-5 text-black" />
+              ) : (
+                <Icon icon="solar:play-bold" className="w-5 h-5 text-black" />
+              )}
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   );
