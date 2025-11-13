@@ -29,8 +29,8 @@ export function Clients() {
       content: "\"A Mavellium entregou exatamente o que precisávamos. O resultado superou nossas expectativas.\""
     },
     {
-      name: "Donize",
-      role: "Fundador",
+      name: "Donizete Caetano",
+      role: "Fundador, Tegbe",
       avatar: "https://randomuser.me/api/portraits/men/44.jpg",
       fallback: "DZ",
       content: "\"A Mavellium entregou exatamente o que precisávamos. O resultado superou nossas expectativas.\""
@@ -67,7 +67,7 @@ export function Clients() {
         {/* Coluna da Esquerda - Texto */}
         <div className="lg:w-1/2 space-y-8 px-25 flex">
           <div className="space-y-6">
-            <h2 className="text-4xl sm:text-2xl font-bold text-black">
+            <h2 className="text-4xl sm:text-3xl font-bold text-black">
               Seja que nem eles
             </h2>
             
@@ -169,9 +169,9 @@ export function Clients() {
             {slides.map((client, i) => (
               <SwiperSlide
                 key={i}
-                className="w-[280px] md:w-[350px] lg:w-[400px]"
+                className="w-[280px] md:w-[350px] lg:w-[400px] py-5 px-2.5"
               >
-                <Card className="bg-white border border-[#04A15E] rounded-3xl shadow-lg p-3 h-[500px] flex flex-col overflow-hidden">
+                <Card className="bg-white border rounded-3xl shadow-lg/30 p-3 h-[500px] flex flex-col overflow-hidden">
                   {/* Container da imagem quadrada no topo */}
                   <div className="w-full h-48 bg-gray-300 rounded-3xl overflow-hidden">
                     <img
@@ -186,10 +186,10 @@ export function Clients() {
                     {/* Nome e cargo centralizados */}
                     <CardHeader className="p-0 mb-4 text-start">
                       <div>
-                        <p className="font-semibold text-[#04A15E] text-2xl mb-1">
+                        <p className="font-semibold text-2xl mb-1">
                           {client.name}
                         </p>
-                        <p className="text-xl text-black/80">
+                        <p className="text-xl font-semibold text-black/80">
                           {client.role}
                         </p>
                       </div>
