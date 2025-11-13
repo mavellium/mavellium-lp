@@ -65,7 +65,7 @@ export function Clients() {
       <div className="container flex flex-col lg:flex-row gap-12 items-start">
 
         {/* Coluna da Esquerda - Texto */}
-        <div className="lg:w-1/2 space-y-8 p-5 flex">
+        <div className="lg:w-1/2 space-y-8 px-25 flex">
           <div className="space-y-6">
             <h2 className="text-4xl sm:text-2xl font-bold text-black">
               Seja que nem eles
