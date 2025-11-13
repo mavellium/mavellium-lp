@@ -5,7 +5,7 @@ export function Solution() {
     <>
       {/* --- SEÇÃO 1 --- */}
       <section
-        className="py-12 sm:py-16 md:py-14 w-full flex justify-center items-center bg-white"
+        className="py-12 sm:py-16 md:py-14 w-full flex justify-center items-center bg-[#F4F4F4]"
         id="servicos"
       >
         <div className="container flex flex-col-reverse md:flex-row justify-center items-center gap-10 md:gap-30 px-6">
@@ -44,7 +44,7 @@ export function Solution() {
       </section>
 
       {/* --- SEÇÃO 2 --- */}
-      <section className="py-12 sm:py-16 md:py-14 w-full flex justify-center items-center bg-white">
+      <section className="py-12 sm:py-16 md:py-14 w-full flex justify-center items-center bg-[#F4F4F4]">
         <div className="container flex flex-col-reverse md:flex-row-reverse justify-center items-center gap-10 md:gap-10 px-6">
           {/* Texto */}
           <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left max-w-md space-y-4">
@@ -85,7 +85,7 @@ export function Solution() {
 
       {/* --- SEÇÃO 3 --- */}
       <section
-        className="py-12 sm:py-16 md:py-14 w-full flex justify-center items-center bg-white"
+        className="py-12 sm:py-16 md:py-14 w-full flex justify-center items-center bg-[#F4F4F4]"
         id="servicos"
       >
         <div className="container flex flex-col-reverse md:flex-row justify-center items-center gap-10 md:gap-10 px-6">
@@ -124,7 +124,7 @@ export function Solution() {
       </section>
 
       {/* --- SEÇÃO 4 --- */}
-      <section className="py-12 sm:py-16 md:py-14 w-full flex justify-center items-center bg-white">
+      <section className="py-12 sm:py-16 md:py-14 w-full flex justify-center items-center bg-[#F4F4F4]">
         <div className="container flex flex-col-reverse md:flex-row-reverse justify-center items-center gap-10 md:gap-20 px-6">
           {/* Texto */}
           <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left max-w-md space-y-4">

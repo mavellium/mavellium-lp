@@ -93,7 +93,7 @@ export function Cases() {
 
   return (
     <section
-      className="py-20 w-full flex flex-col justify-center items-center bg-white px-4"
+      className="py-20 w-full flex flex-col justify-center items-center bg-[#F4F4F4] px-4"
       id="cases"
     >
       <div className="container flex flex-col justify-center items-center text-center">

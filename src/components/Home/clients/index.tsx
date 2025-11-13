@@ -61,7 +61,7 @@ export function Clients() {
   };
 
   return (
-    <section className="w-full bg-white py-16 flex justify-center items-center">
+    <section className="w-full bg-[#F4F4F4] py-16 flex justify-center items-center">
       <div className="container flex flex-col lg:flex-row gap-12 items-start">
 
         {/* Coluna da Esquerda - Texto */}
@@ -120,7 +120,7 @@ export function Clients() {
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={2}
-            spaceBetween={30} // Adicionando gap entre os slides
+            spaceBetween={30}
             loop={true}
             speed={600}
             navigation={{
@@ -143,7 +143,7 @@ export function Clients() {
             breakpoints={{
               320: {
                 slidesPerView: 1,
-                spaceBetween: 20, // Gap menor no mobile
+                spaceBetween: 20,
                 coverflowEffect: {
                   rotate: 0,
                   stretch: 0,
@@ -154,7 +154,7 @@ export function Clients() {
               },
               768: {
                 slidesPerView: 3,
-                spaceBetween: 30, // Gap no desktop
+                spaceBetween: 30,
                 coverflowEffect: {
                   rotate: 0,
                   stretch: 70,
@@ -169,31 +169,39 @@ export function Clients() {
             {slides.map((client, i) => (
               <SwiperSlide
                 key={i}
-                className="w-[280px] md:w-[350px] lg:w-[100px]"
+                className="w-[280px] md:w-[350px] lg:w-[400px]"
               >
-                <Card className="bg-[#0C2136] border border-[#04A15E] rounded-2xl shadow-lg p-6 h-[400px] flex flex-col justify-center">
-                  <CardHeader className="p-0 mb-6">
-                    <div className="flex items-center gap-4">
-                      <Avatar className="w-16 h-16 border-2 border-[#04A15E]">
-                        <AvatarImage
-                          alt="Cliente"
-                          src={client.avatar}
-                        />
-                        <AvatarFallback className="bg-[#04A15E] text-white">
-                          {client.fallback}
-                        </AvatarFallback>
-                      </Avatar>
+                <Card className="bg-white border border-[#04A15E] rounded-3xl shadow-lg p-3 h-[500px] flex flex-col overflow-hidden">
+                  {/* Container da imagem quadrada no topo */}
+                  <div className="w-full h-48 bg-gray-300 rounded-3xl overflow-hidden">
+                    <img
+                      src={client.avatar}
+                      alt={client.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  {/* Conteúdo abaixo da imagem */}
+                  <div className="flex-1 p-6 flex flex-col text-start">
+                    {/* Nome e cargo centralizados */}
+                    <CardHeader className="p-0 mb-4 text-start">
                       <div>
-                        <p className="font-semibold text-[#04A15E] text-lg">{client.name}</p>
-                        <p className="text-sm text-white/80">{client.role}</p>
+                        <p className="font-semibold text-[#04A15E] text-2xl mb-1">
+                          {client.name}
+                        </p>
+                        <p className="text-xl text-black/80">
+                          {client.role}
+                        </p>
                       </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="p-0">
-                    <p className="text-white/80 text-base leading-relaxed">
-                      {client.content}
-                    </p>
-                  </CardContent>
+                    </CardHeader>
+
+                    {/* Conteúdo do depoimento */}
+                    <CardContent className="p-0 flex-1 flex items-center">
+                      <p className="text-black/80 text-base leading-relaxed text-start w-full">
+                        {client.content}
+                      </p>
+                    </CardContent>
+                  </div>
                 </Card>
               </SwiperSlide>
             ))}

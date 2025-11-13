@@ -60,7 +60,7 @@ export function About() {
   };
 
   return (
-    <section className="w-full bg-white py-16 flex justify-center items-center">
+    <section className="w-full bg-[#F4F4F4] py-16 flex justify-center items-center">
       <div className="container flex flex-col items-center">
         <h1 className="text-lg sm:text-4xl font-semibold max-w-4xl px-4 mb-10 text-black text-center">
           Mais do que código, criamos experiências digitais que impulsionam negócios.
