@@ -65,14 +65,14 @@ export function Clients() {
       <div className="container flex flex-col lg:flex-row gap-12 items-start">
 
         {/* Coluna da Esquerda - Texto */}
-        <div className="lg:w-1/2 space-y-8 px-25 flex">
+        <div className="lg:w-1/2 space-y-8 px-25 w-full text-center lg:text-start justify-center items-center flex">
           <div className="space-y-6">
             <h2 className="text-4xl sm:text-3xl font-bold text-black">
               Seja que nem eles
             </h2>
             
             {/* Controles de Navegação */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center lg:justify-start justify-center w-full gap-4">
               <button
                 ref={navigationPrevRef}
                 onClick={goToPrev}
@@ -92,7 +92,7 @@ export function Clients() {
 
             <a
               href="/Servicos"
-              className="flex justify-center md:justify-start items-center gap-2"
+              className="flex justify-center lg:justify-start items-center gap-2"
             >
               <Button
                 size="lg"
@@ -153,6 +153,17 @@ export function Clients() {
                 }
               },
               768: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                coverflowEffect: {
+                  rotate: 0,
+                  stretch: 70,
+                  depth: 100,
+                  modifier: 0,
+                  slideShadows: false,
+                }
+              },
+              1024: {
                 slidesPerView: 3,
                 spaceBetween: 30,
                 coverflowEffect: {
