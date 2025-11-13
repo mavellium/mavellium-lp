@@ -2,8 +2,7 @@
 
 import { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Autoplay, Navigation } from "swiper/modules";
-import { motion, AnimatePresence } from "framer-motion";
+import { EffectCoverflow, Navigation } from "swiper/modules";
 import { Button } from "@/components/ui/button";
 import { Icon } from '@iconify/react';
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
@@ -42,7 +41,6 @@ export function Clients() {
   const slides = [...originalSlides, ...originalSlides, ...originalSlides];
 
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
   const swiperRef = useRef<any>(null);
   const navigationPrevRef = useRef<HTMLButtonElement>(null);
   const navigationNextRef = useRef<HTMLButtonElement>(null);
@@ -50,17 +48,6 @@ export function Clients() {
   // Calcular o índice real baseado nos slides originais
   const getRealIndex = (index: number) => {
     return index % originalSlides.length;
-  };
-
-  const togglePlay = () => {
-    if (!swiperRef.current) return;
-
-    if (isPlaying) {
-      swiperRef.current.autoplay.stop();
-    } else {
-      swiperRef.current.autoplay.start();
-    }
-    setIsPlaying(!isPlaying);
   };
 
   const goToNext = () => {
@@ -74,13 +61,13 @@ export function Clients() {
   };
 
   return (
-    <section className="w-full bg-[#030F1B] py-16 flex justify-center items-center">
-      <div className="container flex flex-col lg:flex-row gap-12 items-center">
+    <section className="w-full bg-white py-16 flex justify-center items-center">
+      <div className="container flex flex-col lg:flex-row gap-12 items-start">
 
         {/* Coluna da Esquerda - Texto */}
-        <div className="lg:w-1/2 space-y-8 p-5 flex justify-center items-start">
+        <div className="lg:w-1/2 space-y-8 p-5 flex">
           <div className="space-y-6">
-            <h2 className="text-4xl sm:text-2xl font-bold text-white">
+            <h2 className="text-4xl sm:text-2xl font-bold text-black">
               Seja que nem eles
             </h2>
             
@@ -89,7 +76,7 @@ export function Clients() {
               <button
                 ref={navigationPrevRef}
                 onClick={goToPrev}
-                className="flex items-center justify-center w-12 h-12 rounded-full bg-[#04A15E] text-white hover:bg-[#038c50] transition-colors duration-300"
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-[#DBDBDB] text-black hover:bg-black hover:text-white transition-colors duration-300"
               >
                 <Icon icon="solar:alt-arrow-left-linear" className="w-6 h-6" />
               </button>
@@ -97,22 +84,10 @@ export function Clients() {
               <button
                 ref={navigationNextRef}
                 onClick={goToNext}
-                className="flex items-center justify-center w-12 h-12 rounded-full bg-[#04A15E] text-white hover:bg-[#038c50] transition-colors duration-300"
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-[#DBDBDB] text-black hover:bg-black hover:text-white transition-colors duration-300"
               >
                 <Icon icon="solar:alt-arrow-right-linear" className="w-6 h-6" />
               </button>
-
-              {/* Botão Play/Pause */}
-              <Button
-                onClick={togglePlay}
-                className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border-white/20 text-white hover:bg-white/20 transition-colors duration-300"
-              >
-                {isPlaying ? (
-                  <Icon icon="solar:pause-bold" className="w-5 h-5" />
-                ) : (
-                  <Icon icon="solar:play-bold" className="w-5 h-5" />
-                )}
-              </Button>
             </div>
 
             <a
@@ -130,28 +105,24 @@ export function Clients() {
         </div>
 
         {/* Coluna da Direita - Carrossel */}
-        <div className="lg:w-1/2 w-full max-w-2xl relative">
+        <div className="w-full max-w-6xl">
           <Swiper
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
-              swiper.slideTo(originalSlides.length, 0);
               setActiveIndex(0);
             }}
             onSlideChange={(swiper) => {
               const realIndex = swiper.realIndex;
               setActiveIndex(realIndex);
             }}
-            modules={[EffectCoverflow, Autoplay, Navigation]}
+            modules={[EffectCoverflow, Navigation]}
             effect="coverflow"
             grabCursor={true}
             centeredSlides={true}
-            slidesPerView={1.2}
+            slidesPerView={2}
+            spaceBetween={30} // Adicionando gap entre os slides
             loop={true}
             speed={600}
-            autoplay={{
-              delay: 3500,
-              disableOnInteraction: false,
-            }}
             navigation={{
               prevEl: navigationPrevRef.current,
               nextEl: navigationNextRef.current,
@@ -165,29 +136,31 @@ export function Clients() {
             coverflowEffect={{
               rotate: 0,
               stretch: 0,
-              depth: 100,
-              modifier: 1,
+              depth: 150,
+              modifier: 1.5,
               slideShadows: true,
             }}
             breakpoints={{
               320: {
                 slidesPerView: 1,
-                coverflowEffect: {
-                  rotate: 0,
-                  stretch: 0,
-                  depth: 50,
-                  modifier: 1,
-                  slideShadows: false,
-                }
-              },
-              768: {
-                slidesPerView: 1.2,
+                spaceBetween: 20, // Gap menor no mobile
                 coverflowEffect: {
                   rotate: 0,
                   stretch: 0,
                   depth: 100,
                   modifier: 1,
-                  slideShadows: true,
+                  slideShadows: false,
+                }
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 30, // Gap no desktop
+                coverflowEffect: {
+                  rotate: 0,
+                  stretch: 70,
+                  depth: 150,
+                  modifier: 0,
+                  slideShadows: false,
                 }
               }
             }}
@@ -196,9 +169,9 @@ export function Clients() {
             {slides.map((client, i) => (
               <SwiperSlide
                 key={i}
-                className="w-full max-w-md"
+                className="w-[280px] md:w-[350px] lg:w-[100px]"
               >
-                <Card className="bg-[#0C2136] border border-[#04A15E] rounded-2xl shadow-lg p-6 h-full">
+                <Card className="bg-[#0C2136] border border-[#04A15E] rounded-2xl shadow-lg p-6 h-[400px] flex flex-col justify-center">
                   <CardHeader className="p-0 mb-6">
                     <div className="flex items-center gap-4">
                       <Avatar className="w-16 h-16 border-2 border-[#04A15E]">
